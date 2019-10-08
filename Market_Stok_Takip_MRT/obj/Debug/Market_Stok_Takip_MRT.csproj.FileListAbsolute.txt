@@ -1,0 +1,32 @@
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe.config
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.pdb
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csprojResolveAssemblyReference.cache
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Properties.Resources.resources
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csproj.GenerateResource.Cache
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.exe
+c:\users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.pdb
+C:\Users\mrton\onedrive\belgeler\visual studio 2015\Projects\Market_Stok_Takip_MRT\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.UrunGiris.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe.config
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.exe
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.pdb
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.pdb
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csprojResolveAssemblyReference.cache
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Satisİslemi.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.UrunGiris.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Properties.Resources.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csproj.GenerateResource.Cache
+E:\Belgelerim\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Stoklar.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe.config
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.exe
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.pdb
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csprojResolveAssemblyReference.cache
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Satisİslemi.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Stoklar.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.UrunGiris.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Properties.Resources.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csproj.GenerateResource.Cache
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.pdb
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Login.resources
