@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UrunGiris));
             this.btnBarkodVer = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnUrunGrubuEkle = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,7 +49,8 @@
             this.txtOlcuBirimi = new System.Windows.Forms.TextBox();
             this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
             this.btnVazgec = new System.Windows.Forms.Button();
-            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.txtStokMiktari = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBarkodVer
@@ -63,6 +65,15 @@
             this.btnBarkodVer.Text = "Otomatik Barkod No Ver";
             this.btnBarkodVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBarkodVer.UseVisualStyleBackColor = true;
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.ımageList1.Images.SetKeyName(0, "Button-Ok-icon.png");
+            this.ımageList1.Images.SetKeyName(1, "Button-Delete-icon.png");
+            this.ımageList1.Images.SetKeyName(2, "Button-Add-icon.png");
+            this.ımageList1.Images.SetKeyName(3, "Button-Refresh-icon.png");
             // 
             // btnUrunGrubuEkle
             // 
@@ -83,7 +94,7 @@
             this.btnKaydet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKaydet.ImageKey = "Button-Ok-icon.png";
             this.btnKaydet.ImageList = this.ımageList1;
-            this.btnKaydet.Location = new System.Drawing.Point(37, 323);
+            this.btnKaydet.Location = new System.Drawing.Point(38, 383);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(85, 43);
             this.btnKaydet.TabIndex = 2;
@@ -155,7 +166,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(44, 261);
+            this.label7.Location = new System.Drawing.Point(45, 312);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 17);
             this.label7.TabIndex = 9;
@@ -205,7 +216,7 @@
             // 
             // txtOlcuBirimi
             // 
-            this.txtOlcuBirimi.Location = new System.Drawing.Point(178, 260);
+            this.txtOlcuBirimi.Location = new System.Drawing.Point(179, 311);
             this.txtOlcuBirimi.Multiline = true;
             this.txtOlcuBirimi.Name = "txtOlcuBirimi";
             this.txtOlcuBirimi.Size = new System.Drawing.Size(150, 30);
@@ -224,7 +235,7 @@
             this.btnVazgec.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVazgec.ImageKey = "Button-Delete-icon.png";
             this.btnVazgec.ImageList = this.ımageList1;
-            this.btnVazgec.Location = new System.Drawing.Point(138, 323);
+            this.btnVazgec.Location = new System.Drawing.Point(139, 383);
             this.btnVazgec.Name = "btnVazgec";
             this.btnVazgec.Size = new System.Drawing.Size(85, 43);
             this.btnVazgec.TabIndex = 19;
@@ -232,20 +243,31 @@
             this.btnVazgec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVazgec.UseVisualStyleBackColor = true;
             // 
-            // ımageList1
+            // txtStokMiktari
             // 
-            this.ımageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ımageList1.ImageStream")));
-            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.ımageList1.Images.SetKeyName(0, "Button-Ok-icon.png");
-            this.ımageList1.Images.SetKeyName(1, "Button-Delete-icon.png");
-            this.ımageList1.Images.SetKeyName(2, "Button-Add-icon.png");
-            this.ımageList1.Images.SetKeyName(3, "Button-Refresh-icon.png");
+            this.txtStokMiktari.Location = new System.Drawing.Point(179, 264);
+            this.txtStokMiktari.Multiline = true;
+            this.txtStokMiktari.Name = "txtStokMiktari";
+            this.txtStokMiktari.Size = new System.Drawing.Size(150, 30);
+            this.txtStokMiktari.TabIndex = 21;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(45, 265);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 17);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Mevcut Stok Miktarı";
             // 
             // UrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 533);
+            this.Controls.Add(this.txtStokMiktari);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnVazgec);
             this.Controls.Add(this.cmbUrunGrubu);
             this.Controls.Add(this.txtOlcuBirimi);
@@ -293,6 +315,8 @@
         private System.Windows.Forms.ComboBox cmbUrunGrubu;
         private System.Windows.Forms.Button btnVazgec;
         private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.TextBox txtStokMiktari;
+        private System.Windows.Forms.Label label8;
     }
 }
 
