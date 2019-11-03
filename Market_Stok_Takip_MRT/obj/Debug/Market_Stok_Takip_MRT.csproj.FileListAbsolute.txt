@@ -30,3 +30,17 @@ E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\M
 E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe
 E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.pdb
 E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Login.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe.config
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.exe
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.pdb
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.exe
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\bin\Debug\Market_Stok_Takip_MRT.pdb
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csprojResolveAssemblyReference.cache
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Login.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Satisİslemi.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Stoklar.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.UrunGiris.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Properties.Resources.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csproj.GenerateResource.Cache
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Kasa.resources
+C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Musteriler.resources

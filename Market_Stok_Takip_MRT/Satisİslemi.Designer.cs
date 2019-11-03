@@ -58,6 +58,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -218,7 +221,7 @@
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button17.Location = new System.Drawing.Point(47, 411);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(191, 205);
+            this.button17.Size = new System.Drawing.Size(114, 98);
             this.button17.TabIndex = 17;
             this.button17.Text = "Nakit Satış";
             this.button17.UseVisualStyleBackColor = true;
@@ -331,11 +334,44 @@
             this.label5.TabIndex = 29;
             this.label5.Text = "Barkod Okutun";
             // 
+            // button20
+            // 
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button20.Location = new System.Drawing.Point(167, 411);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(114, 98);
+            this.button20.TabIndex = 30;
+            this.button20.Text = "Kredi Kartı";
+            this.button20.UseVisualStyleBackColor = true;
+            // 
+            // button21
+            // 
+            this.button21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button21.Location = new System.Drawing.Point(47, 518);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(114, 98);
+            this.button21.TabIndex = 31;
+            this.button21.Text = "Veresiye";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button22
+            // 
+            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button22.Location = new System.Drawing.Point(167, 518);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(114, 98);
+            this.button22.TabIndex = 32;
+            this.button22.Text = "Çek";
+            this.button22.UseVisualStyleBackColor = true;
+            // 
             // Satisİslemi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 686);
+            this.Controls.Add(this.button22);
+            this.Controls.Add(this.button21);
+            this.Controls.Add(this.button20);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -406,5 +442,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
     }
 }
