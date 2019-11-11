@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaMenu.Designer.cs">
+      <DependentUpon>AnaMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Baglanti.cs" />
     <Compile Include="Iadeler.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,9 @@
     <Compile Include="VeresiyeDefteri.Designer.cs">
       <DependentUpon>VeresiyeDefteri.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AnaMenu.resx">
+      <DependentUpon>AnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Iadeler.resx">
       <DependentUpon>Iadeler.cs</DependentUpon>
     </EmbeddedResource>

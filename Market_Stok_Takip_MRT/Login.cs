@@ -16,5 +16,12 @@ namespace Market_Stok_Takip_MRT
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AnaMenu anaMenu = new AnaMenu();
+            anaMenu.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,5 +21,10 @@ namespace Market_Stok_Takip_MRT
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

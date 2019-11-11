@@ -25,8 +25,8 @@ namespace Market_Stok_Takip_MRT
 
         private void button1_Click(object sender, EventArgs e)  //müşteri kayıt butonu
         {
-            veritabani.baglan();
-            veritabani.sqlCalistir("insert into kullanicilar (ad_soyad,email,telefon) values ()");
+            
+            veritabani.sqlCalistir("insert into musteriler (ad_soyad,email,telefon,adres,notlar,kayit_tarihi) values ('"+textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now +"')");
 
 
         }

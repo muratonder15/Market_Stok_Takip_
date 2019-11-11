@@ -44,3 +44,9 @@ C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.csproj.GenerateResource.Cache
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Kasa.resources
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Musteriler.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Iadeler.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Kasa.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.MusteriKayit.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Musteriler.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.VeresiyeDefteri.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.AnaMenu.resources
