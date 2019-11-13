@@ -14,26 +14,55 @@ namespace Market_Stok_Takip_MRT
 
         OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\\Belgelerim\\GitHub\\Market_Stok_Takip_-master\\stok_takip_veritabani.mdb");
         
-
-        public void sqlCalistir(string sorgu)
+        
+        public void sqlCalistir(string sorgu_cumlesi)
         {
             baglanti.Open();
             OleDbCommand komut = new OleDbCommand();         
             komut.Connection = baglanti;
-            komut.CommandText = sorgu;
+            komut.CommandText = sorgu_cumlesi;
             komut.ExecuteNonQuery();
+            OleDbDataReader oku = komut.ExecuteReader();
             baglanti.Close();
         }
-        public void verileriGoster(string veriler, DataGridView grid)
+
+        public void verileriOku(string sorgu_cumlesi)
         {
-            OleDbDataAdapter da = new OleDbDataAdapter(veriler, baglanti);
+            OleDbCommand komut = new OleDbCommand();
+            komut.Connection = baglanti;
+            komut.CommandText = sorgu_cumlesi;
+            OleDbDataAdapter da = new OleDbDataAdapter(sorgu_cumlesi, baglanti);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            OleDbDataReader oku = komut.ExecuteReader();
+        }
+
+        public DataSet verileriTablodaGoster(string sorgu_cumlesi)
+        {
+            OleDbDataAdapter da = new OleDbDataAdapter(sorgu_cumlesi, baglanti);
             DataSet ds= new DataSet();
             da.Fill(ds);
-            grid.DataSource = ds.Tables[0];
-
-
-            
+            return  ds.Tables[0];
+         
         }
+        public void verileriComboListele(string sorgu_cumlesi, string icerik,string id,ComboBox item)
+        {    
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand();
+            komut.Connection = baglanti;
+            komut.CommandText = sorgu_cumlesi;
+            OleDbDataReader oku = komut.ExecuteReader();
+            item.Items.Clear();
+            item.DisplayMember = "Text";
+            item.ValueMember = "Value";
+            while (oku.Read())
+            {
+                item.Items.Add( new  {Text= oku[icerik], Value= oku[id] });
+            }
+            baglanti.Close();
+
+        }
+        
 
     }
 }

@@ -112,6 +112,7 @@
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // label1
             // 
@@ -190,6 +191,7 @@
             this.txtBarkodNo.Name = "txtBarkodNo";
             this.txtBarkodNo.Size = new System.Drawing.Size(150, 30);
             this.txtBarkodNo.TabIndex = 11;
+            this.txtBarkodNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkodNo_KeyDown);
             // 
             // txtUrunAdi
             // 

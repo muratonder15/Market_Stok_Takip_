@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Market_Stok_Takip_MRT
 {
@@ -16,7 +17,8 @@ namespace Market_Stok_Takip_MRT
         {
             InitializeComponent();
         }
-
+        
+        Baglanti baglanti = new Baglanti();
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -35,6 +37,27 @@ namespace Market_Stok_Takip_MRT
         private void UrunGiris_Load(object sender, EventArgs e)
         {
 
+            baglanti.verileriComboListele("select * from urun_grubu where urun_grup_id<>1","urun_grup_adi","urun_grup_id", cmbUrunGrubu);
+            baglanti.verileriComboListele("select * from toptancilar", "toptanci_adi", "toptanci_id", comboBox1);
+            baglanti.verileriComboListele("select * from odeme_turleri", "odeme_turu", "odeme_kodu", comboBox2);
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            label1.Visible = false;
+            label2.Visible = false;
+             txtUrunAdi.DataBindings.Add("Text",  baglanti.verileriOku("select * from urun_stok","urun_adi"));
+        }
+
+        private void btnKaydet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBarkodNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                baglanti.sqlCalistir("select * from urun_stok where urun_grup_id="+txtBarkodNo.Text);
+            }
         }
     }
 }
