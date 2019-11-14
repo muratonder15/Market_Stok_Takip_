@@ -26,23 +26,24 @@ namespace Market_Stok_Takip_MRT
             baglanti.Close();
         }
 
-        public void verileriOku(string sorgu_cumlesi)
-        {
-            OleDbCommand komut = new OleDbCommand();
-            komut.Connection = baglanti;
-            komut.CommandText = sorgu_cumlesi;
-            OleDbDataAdapter da = new OleDbDataAdapter(sorgu_cumlesi, baglanti);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            OleDbDataReader oku = komut.ExecuteReader();
-        }
+        //public DataSet verileriOku(string sorgu_cumlesi)
+        //{
+        //    OleDbCommand komut = new OleDbCommand();
+        //    komut.Connection = baglanti;
+        //    komut.CommandText = sorgu_cumlesi;
+        //    OleDbDataAdapter da = new OleDbDataAdapter(sorgu_cumlesi, baglanti);
+        //    DataSet ds = new DataSet();
+        //    da.Fill(ds);
+            
+        //    return ds.Tables[0];
+        //}
 
-        public DataSet verileriTablodaGoster(string sorgu_cumlesi)
+        public void verileriTablodaGoster(string sorgu_cumlesi, DataGridView grid)
         {
             OleDbDataAdapter da = new OleDbDataAdapter(sorgu_cumlesi, baglanti);
             DataSet ds= new DataSet();
             da.Fill(ds);
-            return  ds.Tables[0];
+            grid.DataSource=  ds.Tables[0];
          
         }
         public void verileriComboListele(string sorgu_cumlesi, string icerik,string id,ComboBox item)

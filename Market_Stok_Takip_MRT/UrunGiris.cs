@@ -42,9 +42,11 @@ namespace Market_Stok_Takip_MRT
             baglanti.verileriComboListele("select * from odeme_turleri", "odeme_turu", "odeme_kodu", comboBox2);
             textBox1.Visible = false;
             textBox2.Visible = false;
-            label1.Visible = false;
-            label2.Visible = false;
-             txtUrunAdi.DataBindings.Add("Text",  baglanti.verileriOku("select * from urun_stok","urun_adi"));
+            label9.Visible = false;
+            label10.Visible = false;
+            label11.Visible = false;
+            label12.Visible = false;
+            //txtUrunAdi.DataBindings.Add("Text",  baglanti.verileriOku("select * from urun_stok","urun_adi"));
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
