@@ -46,7 +46,7 @@ namespace Market_Stok_Takip_MRT
             label10.Visible = false;
             label11.Visible = false;
             label12.Visible = false;
-            //txtUrunAdi.DataBindings.Add("Text",  baglanti.verileriOku("select * from urun_stok","urun_adi"));
+            
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -58,7 +58,8 @@ namespace Market_Stok_Takip_MRT
         {
             if (e.KeyCode == Keys.Enter)
             {
-                baglanti.sqlCalistir("select * from urun_stok where urun_grup_id="+txtBarkodNo.Text);
+                
+                txtUrunAdi.Text = baglanti.verileriOku("select top 1 * from urun_stok where urun_grup_id=" + Convert.ToInt32(txtBarkodNo.Text);
             }
         }
     }
