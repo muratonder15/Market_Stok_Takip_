@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +54,7 @@
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Baglanti.cs" />
+    <Compile Include="ComboboxItem.cs" />
     <Compile Include="Iadeler.cs">
       <SubType>Form</SubType>
     </Compile>

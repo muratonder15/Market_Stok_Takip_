@@ -46,22 +46,22 @@
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.txtKdvOrani = new System.Windows.Forms.TextBox();
-            this.txtOlcuBirimi = new System.Windows.Forms.TextBox();
             this.cmbUrunGrubu = new System.Windows.Forms.ComboBox();
             this.btnVazgec = new System.Windows.Forms.Button();
             this.txtStokMiktari = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEskiStok = new System.Windows.Forms.TextBox();
+            this.txtYeniStok = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbToptanci = new System.Windows.Forms.ComboBox();
+            this.cmbOdemeTurleri = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cmbOlcuBirimi = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnBarkodVer
@@ -76,6 +76,7 @@
             this.btnBarkodVer.Text = "Otomatik Barkod No Ver";
             this.btnBarkodVer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBarkodVer.UseVisualStyleBackColor = true;
+            this.btnBarkodVer.Click += new System.EventHandler(this.btnBarkodVer_Click);
             // 
             // ımageList1
             // 
@@ -192,6 +193,7 @@
             this.txtBarkodNo.Size = new System.Drawing.Size(150, 30);
             this.txtBarkodNo.TabIndex = 11;
             this.txtBarkodNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarkodNo_KeyDown);
+            this.txtBarkodNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBarkodNo_KeyPress);
             // 
             // txtUrunAdi
             // 
@@ -209,6 +211,7 @@
             this.txtAlisFiyati.Size = new System.Drawing.Size(150, 30);
             this.txtAlisFiyati.TabIndex = 13;
             this.txtAlisFiyati.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtAlisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAlisFiyati_KeyPress);
             // 
             // txtSatisFiyati
             // 
@@ -218,6 +221,7 @@
             this.txtSatisFiyati.Size = new System.Drawing.Size(150, 30);
             this.txtSatisFiyati.TabIndex = 14;
             this.txtSatisFiyati.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.txtSatisFiyati.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSatisFiyati_KeyPress);
             // 
             // txtKdvOrani
             // 
@@ -226,14 +230,7 @@
             this.txtKdvOrani.Name = "txtKdvOrani";
             this.txtKdvOrani.Size = new System.Drawing.Size(150, 30);
             this.txtKdvOrani.TabIndex = 15;
-            // 
-            // txtOlcuBirimi
-            // 
-            this.txtOlcuBirimi.Location = new System.Drawing.Point(179, 311);
-            this.txtOlcuBirimi.Multiline = true;
-            this.txtOlcuBirimi.Name = "txtOlcuBirimi";
-            this.txtOlcuBirimi.Size = new System.Drawing.Size(150, 30);
-            this.txtOlcuBirimi.TabIndex = 16;
+            this.txtKdvOrani.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKdvOrani_KeyPress);
             // 
             // cmbUrunGrubu
             // 
@@ -263,6 +260,7 @@
             this.txtStokMiktari.Name = "txtStokMiktari";
             this.txtStokMiktari.Size = new System.Drawing.Size(149, 30);
             this.txtStokMiktari.TabIndex = 21;
+            this.txtStokMiktari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStokMiktari_KeyPress);
             // 
             // label8
             // 
@@ -274,21 +272,21 @@
             this.label8.TabIndex = 20;
             this.label8.Text = "Mevcut Stok Miktarı";
             // 
-            // textBox1
+            // txtEskiStok
             // 
-            this.textBox1.Location = new System.Drawing.Point(362, 265);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(52, 29);
-            this.textBox1.TabIndex = 22;
+            this.txtEskiStok.Location = new System.Drawing.Point(362, 265);
+            this.txtEskiStok.Multiline = true;
+            this.txtEskiStok.Name = "txtEskiStok";
+            this.txtEskiStok.Size = new System.Drawing.Size(52, 29);
+            this.txtEskiStok.TabIndex = 22;
             // 
-            // textBox2
+            // txtYeniStok
             // 
-            this.textBox2.Location = new System.Drawing.Point(439, 265);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(52, 29);
-            this.textBox2.TabIndex = 23;
+            this.txtYeniStok.Location = new System.Drawing.Point(439, 265);
+            this.txtYeniStok.Multiline = true;
+            this.txtYeniStok.Name = "txtYeniStok";
+            this.txtYeniStok.Size = new System.Drawing.Size(52, 29);
+            this.txtYeniStok.TabIndex = 23;
             // 
             // label9
             // 
@@ -330,21 +328,21 @@
             this.label12.TabIndex = 27;
             this.label12.Text = "=";
             // 
-            // comboBox1
+            // cmbToptanci
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(179, 354);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 21);
-            this.comboBox1.TabIndex = 28;
+            this.cmbToptanci.FormattingEnabled = true;
+            this.cmbToptanci.Location = new System.Drawing.Point(179, 354);
+            this.cmbToptanci.Name = "cmbToptanci";
+            this.cmbToptanci.Size = new System.Drawing.Size(150, 21);
+            this.cmbToptanci.TabIndex = 28;
             // 
-            // comboBox2
+            // cmbOdemeTurleri
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(179, 396);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(150, 21);
-            this.comboBox2.TabIndex = 29;
+            this.cmbOdemeTurleri.FormattingEnabled = true;
+            this.cmbOdemeTurleri.Location = new System.Drawing.Point(179, 396);
+            this.cmbOdemeTurleri.Name = "cmbOdemeTurleri";
+            this.cmbOdemeTurleri.Size = new System.Drawing.Size(150, 21);
+            this.cmbOdemeTurleri.TabIndex = 29;
             // 
             // label13
             // 
@@ -379,27 +377,35 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // cmbOlcuBirimi
+            // 
+            this.cmbOlcuBirimi.FormattingEnabled = true;
+            this.cmbOlcuBirimi.Location = new System.Drawing.Point(178, 311);
+            this.cmbOlcuBirimi.Name = "cmbOlcuBirimi";
+            this.cmbOlcuBirimi.Size = new System.Drawing.Size(150, 21);
+            this.cmbOlcuBirimi.TabIndex = 33;
+            // 
             // UrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 533);
+            this.Controls.Add(this.cmbOlcuBirimi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbOdemeTurleri);
+            this.Controls.Add(this.cmbToptanci);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtYeniStok);
+            this.Controls.Add(this.txtEskiStok);
             this.Controls.Add(this.txtStokMiktari);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnVazgec);
             this.Controls.Add(this.cmbUrunGrubu);
-            this.Controls.Add(this.txtOlcuBirimi);
             this.Controls.Add(this.txtKdvOrani);
             this.Controls.Add(this.txtSatisFiyati);
             this.Controls.Add(this.txtAlisFiyati);
@@ -440,23 +446,23 @@
         private System.Windows.Forms.TextBox txtAlisFiyati;
         private System.Windows.Forms.TextBox txtSatisFiyati;
         private System.Windows.Forms.TextBox txtKdvOrani;
-        private System.Windows.Forms.TextBox txtOlcuBirimi;
         private System.Windows.Forms.ComboBox cmbUrunGrubu;
         private System.Windows.Forms.Button btnVazgec;
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.TextBox txtStokMiktari;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEskiStok;
+        private System.Windows.Forms.TextBox txtYeniStok;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbToptanci;
+        private System.Windows.Forms.ComboBox cmbOdemeTurleri;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbOlcuBirimi;
     }
 }
 
