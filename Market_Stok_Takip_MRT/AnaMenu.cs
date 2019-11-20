@@ -92,7 +92,14 @@ namespace Market_Stok_Takip_MRT
 
         private void toolStripButton5_Click(object sender, EventArgs e)
         {
+            Toptancilar toptancilar = new Toptancilar();
+            toptancilar.Show();
+        }
 
+        private void toptanciEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ToptanciKayit toptanci_kayit = new ToptanciKayit();
+            toptanci_kayit.Show();
         }
     }
 }

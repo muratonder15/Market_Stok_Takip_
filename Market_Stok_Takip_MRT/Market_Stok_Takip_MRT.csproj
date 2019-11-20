@@ -97,6 +97,18 @@
     <Compile Include="Stoklar.Designer.cs">
       <DependentUpon>Stoklar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ToptanciKayit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToptanciKayit.Designer.cs">
+      <DependentUpon>ToptanciKayit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Toptancilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Toptancilar.Designer.cs">
+      <DependentUpon>Toptancilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="UrunGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stoklar.resx">
       <DependentUpon>Stoklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToptanciKayit.resx">
+      <DependentUpon>ToptanciKayit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Toptancilar.resx">
+      <DependentUpon>Toptancilar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UrunGiris.resx">
       <DependentUpon>UrunGiris.cs</DependentUpon>

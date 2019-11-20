@@ -75,12 +75,8 @@ namespace Market_Stok_Takip_MRT
                     + Convert.ToInt32(txtBarkodNo.Text) + ",'" + txtUrunAdi.Text + "'," + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + "," + Convert.ToInt32(txtAlisFiyati.Text) + ","
                     + Convert.ToInt32(txtSatisFiyati.Text) + "," + Convert.ToInt32(txtKdvOrani.Text) + "," + Convert.ToInt32(txtStokMiktari.Text) + ","
                     + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + "," + Convert.ToInt32(cmbToptanci.SelectedValue) + "," + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + ")");
-                MessageBox.Show("Kayıt başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
-                UrunGiris urun_giris = new UrunGiris();
-                cmbUrunGrubu.SelectedIndex = 0;
-                cmbOlcuBirimi.SelectedIndex = 0;
-                cmbToptanci.SelectedIndex = 0;
-                cmbOdemeTurleri.SelectedIndex = 0;
+                MessageBox.Show("Kayıt başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);               
+                
                 foreach (Control item in this.Controls) // textboxları temizle                   
                 {
                     if (item is TextBox)
@@ -89,7 +85,10 @@ namespace Market_Stok_Takip_MRT
                         tbox.Clear();
                     }
                 }
-
+                cmbUrunGrubu.SelectedIndex = 0;
+                cmbOlcuBirimi.SelectedIndex = 0;
+                cmbToptanci.SelectedIndex = 0;
+                cmbOdemeTurleri.SelectedIndex = 0;
             }
         }
 

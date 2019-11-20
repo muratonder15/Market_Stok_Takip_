@@ -141,8 +141,9 @@
             // toptanciEkleToolStripMenuItem
             // 
             this.toptanciEkleToolStripMenuItem.Name = "toptanciEkleToolStripMenuItem";
-            this.toptanciEkleToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.toptanciEkleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.toptanciEkleToolStripMenuItem.Text = "Toptanci Ekle";
+            this.toptanciEkleToolStripMenuItem.Click += new System.EventHandler(this.toptanciEkleToolStripMenuItem_Click);
             // 
             // satisİslemiToolStripMenuItem
             // 
