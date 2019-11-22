@@ -13,6 +13,10 @@ namespace Market_Stok_Takip_MRT
     public partial class Musteriler : Form
     {
         Baglanti baglan = new Baglanti();
+
+        //public int musteri_id;
+        MusteriBorcEkleme musteri_borc_ekleme = new MusteriBorcEkleme();
+        
         public Musteriler()
         {
             InitializeComponent();
@@ -30,9 +34,9 @@ namespace Market_Stok_Takip_MRT
 
         private void Musteriler_Load(object sender, EventArgs e)
         {
-            
-            baglan.verileriTablodaGoster("select * from musteriler", dataGridView1);
-            
+
+            baglan.verileriTablodaGoster("select * from musteriler where musteri_id<>1 order by musteri_id", dataGridView1);
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -40,20 +44,49 @@ namespace Market_Stok_Takip_MRT
 
         }
 
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-           textBox1.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["ad_soyad"].Value.ToString());
-           textBox2.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["email"].Value.ToString());
-           textBox3.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["telefon"].Value.ToString());
-           textBox4.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["adres"].Value.ToString());
-           textBox5.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["notlar"].Value.ToString());
-           textBox6.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["kayit_tarihi"].Value.ToString());
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
+            this.Hide();
             MusteriKayit musteriKayit = new MusteriKayit();
             musteriKayit.Show();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MusteriBorcEkleme musteri_borc_ekleme = new MusteriBorcEkleme();
+            musteri_borc_ekleme.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());          
+            musteri_borc_ekleme.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MusteriOdemesi musteri_odemesi = new MusteriOdemesi();
+            musteri_odemesi.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = dataGridView1.CurrentRow.Cells["ad_soyad"].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells["telefon"].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells["adres"].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells["notlar"].Value.ToString();
+            textBox6.Text = dataGridView1.CurrentRow.Cells["kayit_tarihi"].Value.ToString();
+            textBox9.Text = dataGridView1.CurrentRow.Cells["devreden_borc"].Value.ToString();
         }
     }
 }

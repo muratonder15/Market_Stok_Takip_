@@ -25,11 +25,11 @@ namespace Market_Stok_Takip_MRT
 
         private void button1_Click(object sender, EventArgs e)  //müşteri kayıt butonu
         {
-            
-            veritabani.sqlCalistir("insert into musteriler (ad_soyad,email,telefon,adres,notlar,kayit_tarihi) values ('"+textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now +"')");
-
+            Musteriler musteriler = new Musteriler();
+            veritabani.sqlCalistir("insert into musteriler (ad_soyad,email,telefon,adres,notlar,kayit_tarihi,devreden_borc) values ('"
+             +textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now + "','" + textBox6.Text + "')");           
+            musteriler.Show();
 
         }
     }
 }
-//Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\Belgelerim\GitHub\Market_Stok_Takip_-master\stok_takip_veritabani.mdb

@@ -46,5 +46,23 @@ namespace Market_Stok_Takip_MRT
         {
             baglanti.verileriTablodaGoster("select * from toptancilar where toptanci_id<>1 and toptanci_adi like'%"+textBox1.Text+"%'", dataGridView1);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ToptanciOdemesi toptanci_odemesi = new ToptanciOdemesi();
+            toptanci_odemesi.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ToptanciBorcEkleme toptanci_borc_ekleme = new ToptanciBorcEkleme();
+            toptanci_borc_ekleme.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ToptanciKayit toptanci_kayit = new ToptanciKayit();
+            toptanci_kayit.Show();
+        }
     }
 }

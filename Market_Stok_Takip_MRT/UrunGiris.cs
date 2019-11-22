@@ -21,7 +21,7 @@ namespace Market_Stok_Takip_MRT
         Baglanti baglanti = new Baglanti();
         private void button2_Click(object sender, EventArgs e)
         {
-            string grup_adi= Interaction.InputBox("Ürün Grubu Giriniz ", "Bilgi Girişi", "Örn: Ali", 0, 0);
+            string grup_adi= Interaction.InputBox("Ürün Grubu Giriniz ", "Bilgi Girişi", "", 0, 0);
             baglanti.sqlCalistir("insert into urun_grubu (urun_grup_adi) values('"+grup_adi+"')");
             
             baglanti.verileriComboListele("select * from urun_grubu", "urun_grup_adi", "urun_grup_id", cmbUrunGrubu);

@@ -52,3 +52,7 @@ E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\M
 E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.AnaMenu.resources
 E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.ToptanciKayit.resources
 E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Toptancilar.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.MusteriBorcEkleme.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.MusteriOdemesi.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.ToptanciBorcEkleme.resources
+E:\Belgelerim\GitHub\Market_Stok_Takip_-master\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.ToptanciOdemesi.resources

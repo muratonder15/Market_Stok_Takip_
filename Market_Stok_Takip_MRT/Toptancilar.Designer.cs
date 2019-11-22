@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtBorc = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNotlar = new System.Windows.Forms.TextBox();
@@ -49,9 +53,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtToptanciAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,45 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 13);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "Toptancı Adı";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(476, 211);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 57);
+            this.button3.TabIndex = 62;
+            this.button3.Text = "Toptancı Borcuna Ekleme Yap";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(395, 211);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 57);
+            this.button2.TabIndex = 61;
+            this.button2.Text = "Toptancıya Ödeme Yap";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(314, 210);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 58);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Toptancı Hesap Detayı";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txtBorc
             // 
@@ -261,33 +300,6 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Toptancı Adı";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(314, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 58);
-            this.button1.TabIndex = 60;
-            this.button1.Text = "Toptancı Hesap Detayı";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(395, 211);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 57);
-            this.button2.TabIndex = 61;
-            this.button2.Text = "Toptancıya Ödeme Yap";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(476, 211);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(80, 57);
-            this.button3.TabIndex = 62;
-            this.button3.Text = "Toptancı Borcuna Ekleme Yap";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -306,6 +318,7 @@
             this.button4.TabIndex = 63;
             this.button4.Text = "Toptancı Ekle";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -366,16 +379,6 @@
             this.label12.Size = new System.Drawing.Size(183, 13);
             this.label12.TabIndex = 63;
             this.label12.Text = "Bütün Toptancılara Toplam Borcunuz";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 42);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(67, 13);
-            this.label13.TabIndex = 63;
-            this.label13.Text = "Toptancı Adı";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // Toptancilar
             // 
