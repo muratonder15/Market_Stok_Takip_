@@ -17,7 +17,7 @@ namespace Market_Stok_Takip_MRT
         {
             InitializeComponent();
         }
-        
+        public int urun_id;
         Baglanti baglanti = new Baglanti();
         private void button2_Click(object sender, EventArgs e)
         {
@@ -52,6 +52,26 @@ namespace Market_Stok_Takip_MRT
             label10.Visible = false;
             label11.Visible = false;
             label12.Visible = false;
+            if (urun_id.ToString()!="0")
+            {
+                DataTable table = new DataTable();
+                
+                table = baglanti.verileriOku("select top 1 * from urun_stok where id=" + urun_id);
+                
+                    txtBarkodNo.Text= Convert.ToString(table.Rows[0][1]); 
+                    txtUrunAdi.Text = Convert.ToString(table.Rows[0][2]);
+                    cmbUrunGrubu.SelectedValue = table.Rows[0][3].ToString();
+                    txtAlisFiyati.Text = Convert.ToString(table.Rows[0][4]);
+                    txtSatisFiyati.Text = Convert.ToString(table.Rows[0][5]);
+                    txtKdvOrani.Text = Convert.ToString(table.Rows[0][6]);
+                    txtEskiStok.Text = Convert.ToString(table.Rows[0][7]);
+                    cmbOlcuBirimi.SelectedValue = table.Rows[0][8].ToString();
+                    cmbToptanci.SelectedValue = table.Rows[0][9].ToString();
+                 
+                   
+
+                
+            }
             
         }
 
@@ -69,14 +89,17 @@ namespace Market_Stok_Takip_MRT
             }
             else
             {
-
+                             
                 baglanti.sqlCalistir
                     ("insert into urun_stok (barkod,urun_adi,urun_grup_id,alis_fiyati,satis_fiyati,kdv_orani,mevcut_stok,olcu_birimi_id,toptanci_id,odeme_turu_id) values("
                     + Convert.ToInt32(txtBarkodNo.Text) + ",'" + txtUrunAdi.Text + "'," + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + "," + Convert.ToInt32(txtAlisFiyati.Text) + ","
                     + Convert.ToInt32(txtSatisFiyati.Text) + "," + Convert.ToInt32(txtKdvOrani.Text) + "," + Convert.ToInt32(txtStokMiktari.Text) + ","
                     + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + "," + Convert.ToInt32(cmbToptanci.SelectedValue) + "," + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + ")");
-                MessageBox.Show("Kayıt başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);               
-                
+                MessageBox.Show("Kayıt başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
+                Stoklar stoklar = (Stoklar)Application.OpenForms["Stoklar"];
+                baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);
+
+
                 foreach (Control item in this.Controls) // textboxları temizle                   
                 {
                     if (item is TextBox)
@@ -89,6 +112,8 @@ namespace Market_Stok_Takip_MRT
                 cmbOlcuBirimi.SelectedIndex = 0;
                 cmbToptanci.SelectedIndex = 0;
                 cmbOdemeTurleri.SelectedIndex = 0;
+                
+                    
             }
         }
 
@@ -109,8 +134,8 @@ namespace Market_Stok_Takip_MRT
                     txtSatisFiyati.Text = Convert.ToString(table.Rows[0][5]);
                     txtKdvOrani.Text = Convert.ToString(table.Rows[0][6]);
                     txtEskiStok.Text= Convert.ToString(table.Rows[0][7]);
-                    cmbOlcuBirimi.SelectedIndex = Convert.ToInt32(table.Rows[0][8]);
-                    cmbToptanci.SelectedIndex = Convert.ToInt32(table.Rows[0][9]);
+                    cmbOlcuBirimi.SelectedValue = Convert.ToInt32(table.Rows[0][8]);
+                    cmbToptanci.SelectedValue = Convert.ToInt32(table.Rows[0][9]);
                     txtBarkodNo.Clear();
                     txtBarkodNo.Text = barkod;
 
@@ -165,6 +190,27 @@ namespace Market_Stok_Takip_MRT
             DataTable table = new DataTable();
             table = baglanti.verileriOku("select max(barkod) from urun_stok");
             txtBarkodNo.Text = Convert.ToString(Convert.ToInt32(table.Rows[0][0])+1);
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (urun_id.ToString() != "0")
+            {
+                txtYeniStok.Text = (Convert.ToInt32(txtStokMiktari.Text) + Convert.ToInt32(txtEskiStok.Text)).ToString();
+                baglanti.sqlCalistir("update urun_stok set urun_adi='" + txtUrunAdi.Text + "',urun_grup_id=" + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + ",alis_fiyati=" + Convert.ToInt32(txtAlisFiyati.Text)
+                    + ",satis_fiyati=" + Convert.ToInt32(txtSatisFiyati.Text) + ",kdv_orani=" + Convert.ToInt32(txtKdvOrani.Text) + ",mevcut_stok=" + Convert.ToUInt32(txtYeniStok.Text)
+                    + ",olcu_birimi_id=" + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + ",toptanci_id=" + Convert.ToInt32(cmbToptanci.SelectedValue) + ",odeme_turu_id=" + Convert.ToInt32(cmbOdemeTurleri.SelectedValue)
+                    + " where id=" + urun_id
+                    );
+                MessageBox.Show("Güncelleme başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
+                Stoklar stoklar = (Stoklar)Application.OpenForms["Stoklar"];
+                baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);
+            }
+        }
+
+        private void txtStokMiktari_TextChanged(object sender, EventArgs e)
+        {
+            //txtYeniStok.Text =  (Convert.ToInt32(txtStokMiktari.Text) + Convert.ToInt32(txtEskiStok.Text)).ToString();
         }
     }
 }

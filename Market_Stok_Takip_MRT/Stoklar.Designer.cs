@@ -60,8 +60,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -131,6 +129,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Ürünü Düzelt";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox6
             // 
@@ -263,6 +262,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(206, 21);
             this.comboBox2.TabIndex = 21;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -279,6 +279,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(230, 36);
             this.textBox8.TabIndex = 16;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label10
             // 
@@ -318,7 +319,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 150);
             this.dataGridView1.TabIndex = 17;
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // groupBox3
             // 
@@ -368,6 +369,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Ürün Ekle";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox9
             // 
@@ -385,24 +387,6 @@
             this.textBox10.Size = new System.Drawing.Size(185, 24);
             this.textBox10.TabIndex = 19;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(534, 618);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 24);
-            this.label11.TabIndex = 16;
-            this.label11.Text = "Listelenen Kayıt Sayısı";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(742, 618);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(90, 24);
-            this.textBox11.TabIndex = 16;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -417,7 +401,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(45, 661);
+            this.label13.Location = new System.Drawing.Point(39, 661);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(193, 24);
             this.label13.TabIndex = 21;
@@ -425,7 +409,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(742, 661);
+            this.button7.Location = new System.Drawing.Point(742, 618);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(90, 44);
             this.button7.TabIndex = 20;
@@ -440,8 +424,6 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.groupBox3);
@@ -488,7 +470,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
@@ -496,10 +477,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }

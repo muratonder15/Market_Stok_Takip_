@@ -62,6 +62,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbOlcuBirimi = new System.Windows.Forms.ComboBox();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBarkodVer
@@ -260,6 +261,8 @@
             this.txtStokMiktari.Name = "txtStokMiktari";
             this.txtStokMiktari.Size = new System.Drawing.Size(149, 30);
             this.txtStokMiktari.TabIndex = 21;
+            this.txtStokMiktari.Text = "0";
+            this.txtStokMiktari.TextChanged += new System.EventHandler(this.txtStokMiktari_TextChanged);
             this.txtStokMiktari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStokMiktari_KeyPress);
             // 
             // label8
@@ -385,11 +388,27 @@
             this.cmbOlcuBirimi.Size = new System.Drawing.Size(150, 21);
             this.cmbOlcuBirimi.TabIndex = 33;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuncelle.ImageKey = "Button-Ok-icon.png";
+            this.btnGuncelle.ImageList = this.ımageList1;
+            this.btnGuncelle.Location = new System.Drawing.Point(32, 451);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(85, 43);
+            this.btnGuncelle.TabIndex = 34;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Visible = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // UrunGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 533);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.cmbOlcuBirimi);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
@@ -451,18 +470,19 @@
         private System.Windows.Forms.ImageList ımageList1;
         private System.Windows.Forms.TextBox txtStokMiktari;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtEskiStok;
-        private System.Windows.Forms.TextBox txtYeniStok;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cmbToptanci;
         private System.Windows.Forms.ComboBox cmbOdemeTurleri;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbOlcuBirimi;
+        public System.Windows.Forms.TextBox txtEskiStok;
+        public System.Windows.Forms.TextBox txtYeniStok;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.Button btnGuncelle;
     }
 }
 

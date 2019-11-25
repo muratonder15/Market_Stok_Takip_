@@ -27,9 +27,11 @@ namespace Market_Stok_Takip_MRT
         {
             Musteriler musteriler = new Musteriler();
             veritabani.sqlCalistir("insert into musteriler (ad_soyad,email,telefon,adres,notlar,kayit_tarihi,devreden_borc) values ('"
-             +textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now + "','" + textBox6.Text + "')");           
+             +textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now + "','" + textBox6.Text + "')");
+            MessageBox.Show("Borç eklendi!", "Başarılı", MessageBoxButtons.OK);
+            
             musteriler.Show();
-
+            this.Hide();
         }
     }
 }

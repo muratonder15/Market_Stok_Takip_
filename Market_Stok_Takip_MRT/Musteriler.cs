@@ -65,6 +65,7 @@ namespace Market_Stok_Takip_MRT
         private void button3_Click(object sender, EventArgs e)
         {
             MusteriOdemesi musteri_odemesi = new MusteriOdemesi();
+            musteri_odemesi.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());
             musteri_odemesi.Show();
         }
 
@@ -87,6 +88,11 @@ namespace Market_Stok_Takip_MRT
             textBox5.Text = dataGridView1.CurrentRow.Cells["notlar"].Value.ToString();
             textBox6.Text = dataGridView1.CurrentRow.Cells["kayit_tarihi"].Value.ToString();
             textBox9.Text = dataGridView1.CurrentRow.Cells["devreden_borc"].Value.ToString();
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+            baglan.verileriTablodaGoster("select * from musteriler where musteri_id<>1 and ad_soyad like'%" + textBox11.Text + "%'", dataGridView1);
         }
     }
 }

@@ -22,20 +22,7 @@ namespace Market_Stok_Takip_MRT
             baglanti.verileriTablodaGoster("select * from toptancilar where toptanci_id<>1",dataGridView1);
         }
 
-        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            txtToptanciAdi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["toptanci_adi"].Value.ToString());
-            txtSirketYetkilisi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["sirket_yetkilisi"].Value.ToString());
-            txtEmail.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["email"].Value.ToString());
-            txtInternetAdresi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["internet_adresi"].Value.ToString());
-            txtVergiDairesi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["vergi_dairesi"].Value.ToString());
-            txtVergiNo.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["vergi_no"].Value.ToString());
-            txtAdres.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["adres"].Value.ToString());
-            txtTelefon.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["telefon"].Value.ToString());
-            txtNotlar.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["notlar"].Value.ToString());
-            txtBorc.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["toptanci_alacak"].Value.ToString());
-            
-        }
+        
 
         private void label13_Click(object sender, EventArgs e)
         {
@@ -50,12 +37,14 @@ namespace Market_Stok_Takip_MRT
         private void button2_Click(object sender, EventArgs e)
         {
             ToptanciOdemesi toptanci_odemesi = new ToptanciOdemesi();
+            toptanci_odemesi.toptanci_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["toptanci_id"].Value.ToString());
             toptanci_odemesi.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             ToptanciBorcEkleme toptanci_borc_ekleme = new ToptanciBorcEkleme();
+            toptanci_borc_ekleme.toptanci_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["toptanci_id"].Value.ToString());
             toptanci_borc_ekleme.Show();
         }
 
@@ -63,6 +52,20 @@ namespace Market_Stok_Takip_MRT
         {
             ToptanciKayit toptanci_kayit = new ToptanciKayit();
             toptanci_kayit.Show();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            txtToptanciAdi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["toptanci_adi"].Value.ToString());
+            txtSirketYetkilisi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["sirket_yetkilisi"].Value.ToString());
+            txtEmail.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["email"].Value.ToString());
+            txtInternetAdresi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["internet_adresi"].Value.ToString());
+            txtVergiDairesi.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["vergi_dairesi"].Value.ToString());
+            txtVergiNo.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["vergi_no"].Value.ToString());
+            txtAdres.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["adres"].Value.ToString());
+            txtTelefon.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["telefon"].Value.ToString());
+            txtNotlar.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["notlar"].Value.ToString());
+            txtBorc.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["toptanci_alacak"].Value.ToString());
         }
     }
 }
