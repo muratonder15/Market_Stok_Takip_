@@ -12,7 +12,7 @@ namespace Market_Stok_Takip_MRT
     class Baglanti
     {
 
-        OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\\Belgelerim\\GitHub\\Market_Stok_Takip_-master\\stok_takip_veritabani.mdb");
+        OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Murat\\Documents\\GitHub\\Market_Stok_Takip_\\stok_takip_veritabani.mdb");
         
         
         public void sqlCalistir(string sorgu_cumlesi)

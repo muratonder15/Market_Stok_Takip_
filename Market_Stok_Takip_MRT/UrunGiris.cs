@@ -204,7 +204,7 @@ namespace Market_Stok_Takip_MRT
                     );
                 MessageBox.Show("Güncelleme başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
                 Stoklar stoklar = (Stoklar)Application.OpenForms["Stoklar"];
-                baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);
+                baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.kdv_orani,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);
             }
         }
 
