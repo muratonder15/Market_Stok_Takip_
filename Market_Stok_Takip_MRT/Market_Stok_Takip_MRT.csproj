@@ -55,6 +55,12 @@
     </Compile>
     <Compile Include="Baglanti.cs" />
     <Compile Include="ComboboxItem.cs" />
+    <Compile Include="HizliTusSecimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HizliTusSecimi.Designer.cs">
+      <DependentUpon>HizliTusSecimi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iadeler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </Compile>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HizliTusSecimi.resx">
+      <DependentUpon>HizliTusSecimi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iadeler.resx">
       <DependentUpon>Iadeler.cs</DependentUpon>

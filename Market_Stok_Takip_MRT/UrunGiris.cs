@@ -212,5 +212,10 @@ namespace Market_Stok_Takip_MRT
         {
             //txtYeniStok.Text =  (Convert.ToInt32(txtStokMiktari.Text) + Convert.ToInt32(txtEskiStok.Text)).ToString();
         }
+
+        private void txtBarkodNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
