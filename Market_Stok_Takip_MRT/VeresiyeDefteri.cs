@@ -16,7 +16,7 @@ namespace Market_Stok_Takip_MRT
         {
             InitializeComponent();
         }
-
+        public int musteri_id;
         private void VeresiyeDefteri_Load(object sender, EventArgs e)
         {
 
@@ -25,6 +25,18 @@ namespace Market_Stok_Takip_MRT
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MusteriBorcEkleme musteri_borc_ekleme = new MusteriBorcEkleme();
+            musteri_borc_ekleme.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());
+            musteri_borc_ekleme.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

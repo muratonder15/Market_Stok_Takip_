@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Data;
 using System.Windows.Forms;
-
 namespace Market_Stok_Takip_MRT
 {
     class Baglanti
     {
 
-        OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Murat\\Documents\\GitHub\\Market_Stok_Takip_\\stok_takip_veritabani.mdb");
-        
-        
+        //OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\Murat\\Documents\\GitHub\\Market_Stok_Takip_\\stok_takip_veritabani.mdb");
+        //OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\mrton\\OneDrive\\Belgeler\\GitHub\\Market_Stok_Takip_\\stok_takip_veritabani.mdb");
+        OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+Application.StartupPath+ "\\stok_takip_veritabani.mdb");
+
         public void sqlCalistir(string sorgu_cumlesi)
         {
             baglanti.Open();

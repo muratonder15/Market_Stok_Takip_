@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -99,6 +98,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Hesaba Borç Ekle";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -108,6 +108,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Tahsilat Yap";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -116,7 +117,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(23, 135);
+            this.groupBox2.Location = new System.Drawing.Point(23, 108);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(507, 326);
             this.groupBox2.TabIndex = 5;
@@ -163,24 +164,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(472, 217);
             this.dataGridView1.TabIndex = 0;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(480, 338);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(8, 8);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dataGridView2);
-            this.groupBox4.Location = new System.Drawing.Point(23, 467);
+            this.groupBox4.Location = new System.Drawing.Point(23, 440);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(507, 211);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "Alışveris Detayı";
             // 
             // dataGridView2
             // 
@@ -192,7 +184,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(430, 700);
+            this.textBox3.Location = new System.Drawing.Point(430, 673);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 6;
@@ -200,7 +192,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(322, 703);
+            this.label3.Location = new System.Drawing.Point(322, 676);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 5;
@@ -208,7 +200,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(559, 283);
+            this.button4.Location = new System.Drawing.Point(559, 256);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 49);
             this.button4.TabIndex = 7;
@@ -217,7 +209,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(559, 528);
+            this.button5.Location = new System.Drawing.Point(559, 501);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 49);
             this.button5.TabIndex = 8;
@@ -228,13 +220,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 749);
+            this.ClientSize = new System.Drawing.Size(652, 709);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -268,7 +259,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TextBox textBox3;

@@ -103,6 +103,12 @@
     <Compile Include="MusteriOdemesi.Designer.cs">
       <DependentUpon>MusteriOdemesi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Raporlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Raporlar.Designer.cs">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Satisİslemi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     </Compile>
     <Compile Include="ToptanciBorcEkleme.Designer.cs">
       <DependentUpon>ToptanciBorcEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToptanciHareketleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToptanciHareketleri.Designer.cs">
+      <DependentUpon>ToptanciHareketleri.cs</DependentUpon>
     </Compile>
     <Compile Include="ToptanciKayit.cs">
       <SubType>Form</SubType>
@@ -180,6 +192,9 @@
     <EmbeddedResource Include="MusteriOdemesi.resx">
       <DependentUpon>MusteriOdemesi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Raporlar.resx">
+      <DependentUpon>Raporlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Satisİslemi.resx">
       <DependentUpon>Satisİslemi.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToptanciBorcEkleme.resx">
       <DependentUpon>ToptanciBorcEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToptanciHareketleri.resx">
+      <DependentUpon>ToptanciHareketleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ToptanciKayit.resx">
       <DependentUpon>ToptanciKayit.cs</DependentUpon>

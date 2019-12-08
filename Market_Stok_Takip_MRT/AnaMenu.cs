@@ -87,7 +87,8 @@ namespace Market_Stok_Takip_MRT
 
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            
+            Raporlar raporlar = new Raporlar();
+            raporlar.Show();
         }
 
         private void toolStripButton5_Click(object sender, EventArgs e)

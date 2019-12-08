@@ -94,5 +94,12 @@ namespace Market_Stok_Takip_MRT
         {
             baglan.verileriTablodaGoster("select * from musteriler where musteri_id<>1 and ad_soyad like'%" + textBox11.Text + "%'", dataGridView1);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VeresiyeDefteri veresiye_defteri = new VeresiyeDefteri();
+            veresiye_defteri.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());
+            veresiye_defteri.Show();
+        }
     }
 }

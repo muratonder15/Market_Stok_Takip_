@@ -35,8 +35,13 @@ namespace Market_Stok_Takip_MRT
                 "inner join urun_stok us on h.urun_id=us.id) " +
                 "inner join odeme_turleri ot on h.odeme_turu_kodu=ot.odeme_kodu) " +
                 "inner join kullanicilar k on h.islemi_yapan_kullanici_kodu=k.kullanici_kodu) " +
-                "where h.islem_tarihi>='"+dateTimePicker1.Value.ToString()+"' " +
-                "and islem_tarihi<='"+dateTimePicker2.Value.ToString()+"'", dataGridView1);
+                "where h.islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString()+" 00:00:00') " +
+                "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString()+" 23:59:59') order by h.islem_tarihi desc", dataGridView1);
+        }
+
+        private void Kasa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
