@@ -110,6 +110,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Tümü";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // button1
             // 
@@ -135,7 +136,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "v";
             // 
             // label2
             // 
@@ -222,6 +222,7 @@
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Sadece Gider";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -233,6 +234,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Sadece Gelir";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label5
             // 

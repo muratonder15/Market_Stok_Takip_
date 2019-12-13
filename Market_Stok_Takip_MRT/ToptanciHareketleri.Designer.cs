@@ -42,9 +42,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button6 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -150,6 +150,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "Toptancıya Ödeme Yap";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -159,6 +160,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Toptancı Borcuna Ekleme Yap";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -181,13 +183,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tarih Aralığı";
             // 
-            // dateTimePicker1
+            // button6
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(14, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(112, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.button6.Location = new System.Drawing.Point(169, 42);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 4;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dateTimePicker2
             // 
@@ -197,14 +201,13 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(103, 20);
             this.dateTimePicker2.TabIndex = 3;
             // 
-            // button6
+            // dateTimePicker1
             // 
-            this.button6.Location = new System.Drawing.Point(169, 42);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(14, 16);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(112, 20);
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // ToptanciHareketleri
             // 
@@ -221,6 +224,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ToptanciHareketleri";
             this.Text = "ToptanciHareketleri";
+            this.Load += new System.EventHandler(this.ToptanciHareketleri_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);

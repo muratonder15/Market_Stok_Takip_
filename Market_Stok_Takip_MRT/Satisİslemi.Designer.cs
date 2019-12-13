@@ -61,7 +61,8 @@
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
             this.button22 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblMusteriAdi = new System.Windows.Forms.Label();
+            this.button23 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,6 +281,7 @@
             this.textBox4.Size = new System.Drawing.Size(78, 39);
             this.textBox4.TabIndex = 21;
             this.textBox4.Text = "1";
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -380,6 +382,7 @@
             this.button21.TabIndex = 31;
             this.button21.Text = "Veresiye";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -392,22 +395,33 @@
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
-            // label6
+            // lblMusteriAdi
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(147, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 29);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "Müşteri Adı";
+            this.lblMusteriAdi.AutoSize = true;
+            this.lblMusteriAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusteriAdi.Location = new System.Drawing.Point(147, 19);
+            this.lblMusteriAdi.Name = "lblMusteriAdi";
+            this.lblMusteriAdi.Size = new System.Drawing.Size(133, 29);
+            this.lblMusteriAdi.TabIndex = 33;
+            this.lblMusteriAdi.Text = "Müşteri Adı";
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(47, 19);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(78, 29);
+            this.button23.TabIndex = 34;
+            this.button23.Text = "Müşteri Seç";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
             // Satisİslemi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 640);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button23);
+            this.Controls.Add(this.lblMusteriAdi);
             this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
@@ -485,6 +499,7 @@
         public System.Windows.Forms.Button button14;
         public System.Windows.Forms.Button button15;
         public System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button23;
+        public System.Windows.Forms.Label lblMusteriAdi;
     }
 }

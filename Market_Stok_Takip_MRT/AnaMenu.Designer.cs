@@ -334,12 +334,12 @@
         private System.Windows.Forms.ToolStripMenuItem stoklarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem stoklarıListeleToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }

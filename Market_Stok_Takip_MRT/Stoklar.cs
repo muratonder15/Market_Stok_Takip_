@@ -25,9 +25,9 @@ namespace Market_Stok_Takip_MRT
 
         private void Stoklar_Load(object sender, EventArgs e)
         {
-            baglan.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.kdv_orani,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", dataGridView1);
+            baglan.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,format(us.satis_fiyati,'Currency') as satis_fiyati,format(us.alis_fiyati,'Currency') as alis_fiyati,us.kdv_orani,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", dataGridView1);
             textBox10.Text = baglan.verileriOku("select count(*) from urun_stok").Rows[0][0].ToString();
-            textBox9.Text = baglan.verileriOku("select sum(alis_fiyati*mevcut_stok) as toplam from urun_stok where id<>2").Rows[0][0].ToString();
+            textBox9.Text = baglan.verileriOku("select format(sum(alis_fiyati*mevcut_stok),'Currency') as toplam from urun_stok where id<>2").Rows[0][0].ToString();
             baglan.verileriComboListele("select * from urun_grubu", "urun_grup_adi", "urun_grup_id",comboBox2);
         }
 

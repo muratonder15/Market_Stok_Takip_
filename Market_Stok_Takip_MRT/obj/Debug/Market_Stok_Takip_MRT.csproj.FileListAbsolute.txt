@@ -94,3 +94,7 @@ C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.VeresiyeDefteri.resources
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.ToptanciHareketleri.resources
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Raporlar.resources
+C:\Users\Murat\Documents\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Raporlar.resources
+C:\Users\Murat\Documents\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.ToptanciHareketleri.resources
+C:\Users\Murat\Documents\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.MusteriListesi.resources
+C:\Users\Murat\Documents\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.UrunListesi.resources

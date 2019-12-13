@@ -95,9 +95,19 @@ namespace Market_Stok_Takip_MRT
                     + Convert.ToInt32(txtBarkodNo.Text) + ",'" + txtUrunAdi.Text + "'," + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + "," + Convert.ToInt32(txtAlisFiyati.Text) + ","
                     + Convert.ToInt32(txtSatisFiyati.Text) + "," + Convert.ToInt32(txtKdvOrani.Text) + "," + Convert.ToInt32(txtStokMiktari.Text) + ","
                     + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + "," + Convert.ToInt32(cmbToptanci.SelectedValue) + "," + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + ")");
+                
+                urun_id = Convert.ToInt32(baglanti.verileriOku("select id from urun_stok where barkod="+txtBarkodNo.Text).Rows[0][0]);
+                
+                baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,islem_tarihi,barkod,urun_id,alis_fiyati," +
+                    "satis_fiyati,miktar,kar,kdv_orani,odeme_turu_kodu,toplam_tutar,islemi_yapan_kullanici_kodu,musteri_id,toptanci_id)" +
+                    "values(6,2,'"+DateTime.Now+"',"+ Convert.ToInt32(txtBarkodNo.Text)+","+urun_id+","+ Convert.ToInt32(txtAlisFiyati.Text)+","+ Convert.ToInt32(txtSatisFiyati.Text)+","
+                    +Convert.ToInt32(txtStokMiktari.Text)+","+ (Convert.ToInt32(txtSatisFiyati.Text)- Convert.ToInt32(txtAlisFiyati.Text))+","+ Convert.ToInt32(txtKdvOrani.Text)+","
+                   + Convert.ToInt32(cmbOdemeTurleri.SelectedValue)+","+ (Convert.ToInt32(txtAlisFiyati.Text)* Convert.ToInt32(txtStokMiktari.Text))+","
+                    + "1,1,"+ Convert.ToInt32(cmbToptanci.SelectedValue)+")"
+                   );
                 MessageBox.Show("Kayıt başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
                 Stoklar stoklar = (Stoklar)Application.OpenForms["Stoklar"];
-                baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);
+                //baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);
 
 
                 foreach (Control item in this.Controls) // textboxları temizle                   
@@ -202,6 +212,16 @@ namespace Market_Stok_Takip_MRT
                     + ",olcu_birimi_id=" + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + ",toptanci_id=" + Convert.ToInt32(cmbToptanci.SelectedValue) + ",odeme_turu_id=" + Convert.ToInt32(cmbOdemeTurleri.SelectedValue)
                     + " where id=" + urun_id
                     );
+
+                urun_id = Convert.ToInt32(baglanti.verileriOku("select id from urun_stok where barkod=" + txtBarkodNo.Text).Rows[0][0]);
+
+                baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,islem_tarihi,barkod,urun_id,alis_fiyati," +
+                    "satis_fiyati,miktar,kar,kdv_orani,odeme_turu_kodu,toplam_tutar,islemi_yapan_kullanici_kodu,musteri_id,toptanci_id)" +
+                    "values(6,2,'" + DateTime.Now + "'," + Convert.ToInt32(txtBarkodNo.Text) + "," + urun_id + "," + Convert.ToInt32(txtAlisFiyati.Text) + "," + Convert.ToInt32(txtSatisFiyati.Text) + ","
+                    + Convert.ToInt32(txtStokMiktari.Text) + "," + (Convert.ToInt32(txtSatisFiyati.Text) - Convert.ToInt32(txtAlisFiyati.Text)) + "," + Convert.ToInt32(txtKdvOrani.Text) + ","
+                   + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + "," + (Convert.ToInt32(txtAlisFiyati.Text) * Convert.ToInt32(txtStokMiktari.Text)) + ","
+                    + "1,1," + Convert.ToInt32(cmbToptanci.SelectedValue) + ")"
+                   );
                 MessageBox.Show("Güncelleme başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
                 Stoklar stoklar = (Stoklar)Application.OpenForms["Stoklar"];
                 baglanti.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,us.satis_fiyati,us.alis_fiyati,us.kdv_orani,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2", stoklar.dataGridView1);

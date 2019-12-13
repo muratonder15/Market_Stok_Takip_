@@ -16,7 +16,7 @@ namespace Market_Stok_Takip_MRT
 
         //public int musteri_id;
         MusteriBorcEkleme musteri_borc_ekleme = new MusteriBorcEkleme();
-        
+        public int musteri_id;
         public Musteriler()
         {
             InitializeComponent();
@@ -35,7 +35,7 @@ namespace Market_Stok_Takip_MRT
         private void Musteriler_Load(object sender, EventArgs e)
         {
 
-            baglan.verileriTablodaGoster("select * from musteriler where musteri_id<>1 order by musteri_id", dataGridView1);
+            baglan.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 order by musteri_id", dataGridView1);
            
         }
 
@@ -58,20 +58,23 @@ namespace Market_Stok_Takip_MRT
         private void button2_Click(object sender, EventArgs e)
         {
             MusteriBorcEkleme musteri_borc_ekleme = new MusteriBorcEkleme();
-            musteri_borc_ekleme.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());          
+            musteri_borc_ekleme.musteri_id = musteri_id;          
             musteri_borc_ekleme.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             MusteriOdemesi musteri_odemesi = new MusteriOdemesi();
-            musteri_odemesi.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());
+            musteri_odemesi.musteri_id = musteri_id;
             musteri_odemesi.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            MusteriKayit musteri_kayit = new MusteriKayit();
+            musteri_kayit.btnGuncelle.Visible = true;
+            musteri_kayit.musteri_id= musteri_id;
+            musteri_kayit.Show();
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -81,25 +84,53 @@ namespace Market_Stok_Takip_MRT
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            textBox1.Text = dataGridView1.CurrentRow.Cells["ad_soyad"].Value.ToString();
-            textBox2.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells["telefon"].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells["adres"].Value.ToString();
-            textBox5.Text = dataGridView1.CurrentRow.Cells["notlar"].Value.ToString();
-            textBox6.Text = dataGridView1.CurrentRow.Cells["kayit_tarihi"].Value.ToString();
-            textBox9.Text = dataGridView1.CurrentRow.Cells["devreden_borc"].Value.ToString();
+            
+
+            //textBox1.Text = baglan.verileriOku("select ad_soyad from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            //textBox2.Text = baglan.verileriOku("select email from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            //textBox3.Text = baglan.verileriOku("select telefon from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            //textBox4.Text = baglan.verileriOku("select adres from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            //textBox5.Text = baglan.verileriOku("select notlar from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            //textBox6.Text = baglan.verileriOku("select kayit_tarihi from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            //textBox9.Text = baglan.verileriOku("select format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
         }
 
         private void textBox11_TextChanged(object sender, EventArgs e)
         {
-            baglan.verileriTablodaGoster("select * from musteriler where musteri_id<>1 and ad_soyad like'%" + textBox11.Text + "%'", dataGridView1);
+            baglan.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 and ad_soyad like'%" + textBox11.Text + "%'", dataGridView1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             VeresiyeDefteri veresiye_defteri = new VeresiyeDefteri();
-            veresiye_defteri.musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value.ToString());
+            veresiye_defteri.musteri_id = musteri_id;
             veresiye_defteri.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //Iadeler iadeler = (Iadeler)Application.OpenForms["Iadeler"];          
+            
+            Iadeler iadeler = new Iadeler();
+            iadeler.musteri_id= musteri_id;
+            iadeler.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            musteri_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["musteri_id"].Value);         
+            textBox1.Text = baglan.verileriOku("select ad_soyad from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            textBox2.Text = baglan.verileriOku("select email from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            textBox3.Text = baglan.verileriOku("select telefon from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            textBox4.Text = baglan.verileriOku("select adres from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            textBox5.Text = baglan.verileriOku("select notlar from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            textBox6.Text = baglan.verileriOku("select kayit_tarihi from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            textBox9.Text = baglan.verileriOku("select format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
         }
     }
 }
