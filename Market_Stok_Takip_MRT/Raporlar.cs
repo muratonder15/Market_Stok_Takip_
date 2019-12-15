@@ -82,7 +82,7 @@ namespace Market_Stok_Takip_MRT
         private void Raporlar_Load(object sender, EventArgs e)
         {
             baglanti.verileriComboListele("select * from urun_grubu where urun_grup_id<>1","urun_grup_adi","urun_grup_id",comboBox2);
-            baglanti.verileriComboListele("select * from hareket_turleri where hareket_kodu<>1", "hareket_turu", "hareket_kodu", comboBox3);
+            
         }
 
         private void textBox17_TextChanged(object sender, EventArgs e)
@@ -96,7 +96,8 @@ namespace Market_Stok_Takip_MRT
                 "where h.islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') " +
                 "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') " +
                 "and us.urun_adi like '%" +textBox17.Text+"%' "+
-                "order by h.islem_tarihi desc", dataGridView1);
+                //"and us.urun_grup_id=" + comboBox2.SelectedValue.ToString() +
+                " order by h.islem_tarihi desc", dataGridView1);
             
 
         }
@@ -109,7 +110,18 @@ namespace Market_Stok_Takip_MRT
 
         
 
-        private void comboBox3_MouseClick(object sender, MouseEventArgs e)
+       
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_MouseClick(object sender, MouseEventArgs e)
         {
             baglanti.verileriTablodaGoster("select h.islem_tarihi,ht.hareket_turu,h.barkod,us.urun_adi,format(h.alis_fiyati,'Currency') as alis_fiyati,format(h.satis_fiyati,'Currency') as satis_fiyati,h.miktar,format(h.kar,'Currency') as kar,h.kdv_orani,ot.odeme_turu,format(h.toplam_tutar,'Currency') as toplam_tutar,h.cari_hesap_adi,k.ad_soyad as islemi_yapan from (((((hareketler h " +
                 "inner join hareket_turleri ht on h.hareket_turu_kodu=ht.hareket_kodu) " +
@@ -120,8 +132,32 @@ namespace Market_Stok_Takip_MRT
                 "where h.islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') " +
                 "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') " +
                 "and us.urun_adi like '%" + textBox17.Text + "%' " +
-                "and h.hareket_turu_kodu="+ Convert.ToInt32(comboBox3.SelectedValue)+
+                "and us.urun_grup_id="+comboBox2.SelectedValue.ToString()+
                 " order by h.islem_tarihi desc", dataGridView1);
+
+            //textBox1.Text = baglanti.verileriOku("select  format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=4 and odeme_turu_kodu=4 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox2.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=4 and odeme_turu_kodu=2 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox3.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=4 and odeme_turu_kodu=3 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox4.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=4 and odeme_turu_kodu=5 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //          textBox5.Text = baglanti.verileriOku("select format(sum(kar),'Currency') from hareketler where hareket_turu_kodu=4 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox6.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=3 and odeme_turu_kodu=2 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox7.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=3 and odeme_turu_kodu=5 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox8.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=3 and odeme_turu_kodu=3 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            // textBox9.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=1 and odeme_turu_kodu=2 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox10.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=1 and odeme_turu_kodu=5 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox11.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=1 and odeme_turu_kodu=3 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox12.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=6 and odeme_turu_kodu=2 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox13.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=6 and odeme_turu_kodu=5 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox14.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=6 and odeme_turu_kodu=3 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox15.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=5 and odeme_turu_kodu=2 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();// toptancıya iade
+            //textBox16.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=5 and odeme_turu_kodu=2 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+
+            //textBox18.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=4 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox19.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=4 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString(); // toptancıya iade eklenecek
+            //textBox20.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=3 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox21.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=6 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox22.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=5 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            //textBox23.Text = baglanti.verileriOku("select format(sum(toplam_tutar),'Currency') from hareketler where hareket_turu_kodu=1 and islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') and islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
         }
     }
 }

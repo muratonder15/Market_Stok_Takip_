@@ -83,8 +83,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
@@ -105,7 +103,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(360, 24);
+            this.comboBox1.Location = new System.Drawing.Point(348, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(163, 21);
             this.comboBox1.TabIndex = 3;
@@ -415,7 +413,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(248, 27);
+            this.label17.Location = new System.Drawing.Point(236, 42);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(67, 13);
             this.label17.TabIndex = 38;
@@ -424,7 +422,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(248, 111);
+            this.label18.Location = new System.Drawing.Point(236, 98);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(48, 13);
             this.label18.TabIndex = 39;
@@ -432,7 +430,7 @@
             // 
             // textBox17
             // 
-            this.textBox17.Location = new System.Drawing.Point(360, 108);
+            this.textBox17.Location = new System.Drawing.Point(348, 95);
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(163, 20);
             this.textBox17.TabIndex = 40;
@@ -441,7 +439,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(248, 54);
+            this.label19.Location = new System.Drawing.Point(236, 69);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(62, 13);
             this.label19.TabIndex = 42;
@@ -450,10 +448,12 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(360, 51);
+            this.comboBox2.Location = new System.Drawing.Point(348, 66);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(163, 21);
             this.comboBox2.TabIndex = 41;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseClick);
             // 
             // groupBox2
             // 
@@ -578,24 +578,6 @@
             this.textBox21.TabIndex = 51;
             this.textBox21.Text = "0";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(248, 81);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 13);
-            this.label20.TabIndex = 45;
-            this.label20.Text = "Hareket Türü";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(360, 78);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(163, 21);
-            this.comboBox3.TabIndex = 44;
-            this.comboBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox3_MouseClick);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox7);
@@ -664,8 +646,6 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.comboBox2);
@@ -745,8 +725,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;

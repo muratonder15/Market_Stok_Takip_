@@ -36,7 +36,13 @@ namespace Market_Stok_Takip_MRT
         {
 
             baglan.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 order by musteri_id", dataGridView1);
-           
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = false;
+            button6.Enabled = false;
+            button7.Enabled = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -131,6 +137,13 @@ namespace Market_Stok_Takip_MRT
             textBox5.Text = baglan.verileriOku("select notlar from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
             textBox6.Text = baglan.verileriOku("select kayit_tarihi from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
             textBox9.Text = baglan.verileriOku("select format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            button5.Enabled = true;
+            button6.Enabled = true;
+            button7.Enabled = true;
         }
     }
 }
