@@ -34,8 +34,8 @@ namespace Market_Stok_Takip_MRT
 
         private void Musteriler_Load(object sender, EventArgs e)
         {
-
-            baglan.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 order by musteri_id", dataGridView1);
+            textBox10.Text = baglan.verileriOku("select format(sum(devreden_borc),'Currency') from musteriler where musteri_id<>0 and aktif_mi=true").Rows[0][0].ToString();
+            baglan.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 and aktif_mi=true order by musteri_id", dataGridView1);
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
@@ -55,7 +55,7 @@ namespace Market_Stok_Takip_MRT
         private void button4_Click(object sender, EventArgs e)
         {
             
-            this.Hide();
+            //this.Hide();
             MusteriKayit musteriKayit = new MusteriKayit();
             musteriKayit.Show();
            
@@ -124,7 +124,13 @@ namespace Market_Stok_Takip_MRT
 
         private void button6_Click(object sender, EventArgs e)
         {
-            
+            DialogResult cikis = new DialogResult();
+            cikis = MessageBox.Show("Müşteri Bilgisini Silerseniz Sistemde Bulunan Kayıtlı Borçları da Silinecek. Devam etmek istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                baglan.sqlCalistir("update musteriler set aktif_mi=false where musteri_id=" + musteri_id);
+                baglan.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 and aktif_mi=true order by musteri_id", dataGridView1);
+            }
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

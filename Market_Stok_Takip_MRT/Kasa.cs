@@ -29,7 +29,7 @@ namespace Market_Stok_Takip_MRT
 
         private void button6_Click(object sender, EventArgs e)
         {
-            baglanti.verileriTablodaGoster("select h.barkod,h.islem_tarihi,it.islem_turu,ht.hareket_turu,us.urun_adi,h.toplam_tutar,h.cari_hesap_adi,k.ad_soyad as islemi_yapan from (((((hareketler h " +
+            baglanti.verileriTablodaGoster("select h.barkod,h.islem_tarihi,it.islem_turu,ht.hareket_turu,us.urun_adi,format(h.toplam_tutar,'Currency') as toplam_tutar,h.cari_hesap_adi,k.ad_soyad as islemi_yapan from (((((hareketler h " +
                 "inner join hareket_turleri ht on h.hareket_turu_kodu=ht.hareket_kodu) " +
                 "inner join islem_turleri it on h.islem_turu_kodu=it.islem_kodu) " +
                 "inner join urun_stok us on h.urun_id=us.id) " +
@@ -58,7 +58,14 @@ namespace Market_Stok_Takip_MRT
                 "where h.islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') " +
                 "and h.islem_turu_kodu in (2) " +
                 "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59')").Rows[0][0].ToString();
-
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = "0";
+            }
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "0";
+            }
             textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
 
         }
@@ -101,7 +108,14 @@ namespace Market_Stok_Takip_MRT
                     "where h.islem_tarihi>=CDATE('" + dateTimePicker1.Value.ToShortDateString() + " 00:00:00') " +
                     "and h.islem_turu_kodu in (2) " +
                     "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59')").Rows[0][0].ToString();
-
+                if (textBox1.Text == "")
+                {
+                    textBox1.Text = "0";
+                }
+                if (textBox2.Text == "")
+                {
+                    textBox2.Text = "0";
+                }
                 textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
             }
         }
@@ -180,6 +194,24 @@ namespace Market_Stok_Takip_MRT
 
                 textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExceleAktar excel = new ExceleAktar();
+            excel.excelExport(dataGridView1);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GelirGirisi gelir_girisi = new GelirGirisi();
+            gelir_girisi.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GiderGirisi gider_girisi = new GiderGirisi();
+            gider_girisi.Show();
         }
     }
 }

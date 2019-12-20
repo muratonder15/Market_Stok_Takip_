@@ -63,6 +63,8 @@
             this.button22 = new System.Windows.Forms.Button();
             this.lblMusteriAdi = new System.Windows.Forms.Label();
             this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -415,11 +417,33 @@
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.button23_Click);
             // 
+            // button24
+            // 
+            this.button24.BackColor = System.Drawing.Color.Red;
+            this.button24.Location = new System.Drawing.Point(835, 38);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(209, 34);
+            this.button24.TabIndex = 35;
+            this.button24.Text = "HIZLI TUŞ SİL";
+            this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(385, 426);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "label6";
+            // 
             // Satisİslemi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 640);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button24);
             this.Controls.Add(this.button23);
             this.Controls.Add(this.lblMusteriAdi);
             this.Controls.Add(this.button22);
@@ -501,5 +525,7 @@
         public System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button23;
         public System.Windows.Forms.Label lblMusteriAdi;
+        public System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Label label6;
     }
 }

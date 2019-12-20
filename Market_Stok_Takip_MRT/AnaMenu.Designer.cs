@@ -305,6 +305,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "AnaMenu";
             this.Text = "AnaMenu";
+            this.Load += new System.EventHandler(this.AnaMenu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

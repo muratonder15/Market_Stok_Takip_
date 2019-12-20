@@ -35,9 +35,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnToptanciNakit = new System.Windows.Forms.Button();
+            this.btnToptanciyaEkle = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -103,15 +104,38 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnToptanciNakit);
+            this.groupBox1.Controls.Add(this.btnToptanciyaEkle);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button6);
-            this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Location = new System.Drawing.Point(341, 358);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(255, 81);
+            this.groupBox1.Size = new System.Drawing.Size(255, 147);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İade Onaylama";
+            // 
+            // btnToptanciNakit
+            // 
+            this.btnToptanciNakit.Location = new System.Drawing.Point(12, 83);
+            this.btnToptanciNakit.Name = "btnToptanciNakit";
+            this.btnToptanciNakit.Size = new System.Drawing.Size(75, 50);
+            this.btnToptanciNakit.TabIndex = 3;
+            this.btnToptanciNakit.Text = "Toptancı Nakit Ödedi";
+            this.btnToptanciNakit.UseVisualStyleBackColor = true;
+            this.btnToptanciNakit.Visible = false;
+            this.btnToptanciNakit.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnToptanciyaEkle
+            // 
+            this.btnToptanciyaEkle.Location = new System.Drawing.Point(148, 83);
+            this.btnToptanciyaEkle.Name = "btnToptanciyaEkle";
+            this.btnToptanciyaEkle.Size = new System.Drawing.Size(75, 50);
+            this.btnToptanciyaEkle.TabIndex = 5;
+            this.btnToptanciyaEkle.Text = "Toptanci Borcundan Düşülecek";
+            this.btnToptanciyaEkle.UseVisualStyleBackColor = true;
+            this.btnToptanciyaEkle.Visible = false;
+            this.btnToptanciyaEkle.Click += new System.EventHandler(this.btnToptanciyaEkle_Click);
             // 
             // button4
             // 
@@ -125,22 +149,13 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(174, 19);
+            this.button6.Location = new System.Drawing.Point(148, 19);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 50);
             this.button6.TabIndex = 2;
             this.button6.Text = "Müşteri Borcundan Düşülecek";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(93, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 50);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Kredi Kartınan Düşülecek";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -204,11 +219,12 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.Button btnToptanciNakit;
+        public System.Windows.Forms.Button btnToptanciyaEkle;
     }
 }

@@ -330,24 +330,27 @@
             this.button5.TabIndex = 64;
             this.button5.Text = "Toptancı Bilgilerini Düzenle";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(429, 496);
+            this.button6.Location = new System.Drawing.Point(530, 495);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 45);
             this.button6.TabIndex = 65;
             this.button6.Text = "Toptancıya Ürün İade Et";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(530, 496);
+            this.button7.Location = new System.Drawing.Point(429, 495);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 45);
             this.button7.TabIndex = 66;
-            this.button7.Text = "Toptancı Borç Listesi";
+            this.button7.Text = "Toptancı Sil";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // textBox1
             // 

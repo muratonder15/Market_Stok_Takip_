@@ -16,7 +16,7 @@ namespace Market_Stok_Takip_MRT
         {
             InitializeComponent();
         }
-
+        public int kullanici_kodu;
         private void urunEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UrunGiris urunGiris = new UrunGiris();
@@ -101,6 +101,11 @@ namespace Market_Stok_Takip_MRT
         {
             ToptanciKayit toptanci_kayit = new ToptanciKayit();
             toptanci_kayit.Show();
+        }
+
+        private void AnaMenu_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

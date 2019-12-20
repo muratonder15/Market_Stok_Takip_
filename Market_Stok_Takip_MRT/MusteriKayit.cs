@@ -34,20 +34,23 @@ namespace Market_Stok_Takip_MRT
 
         private void button1_Click(object sender, EventArgs e)  //müşteri kayıt butonu
         {
-            Musteriler musteriler = new Musteriler();
+            Musteriler musteriler = (Musteriler)Application.OpenForms["Musteriler"];
             baglanti.sqlCalistir("insert into musteriler (ad_soyad,email,telefon,adres,notlar,kayit_tarihi,devreden_borc) values ('"
-             +textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now + "','" + textBox6.Text + "')");
+             +textBox1.Text+"','"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"','"+DateTime.Now + "','" + textBox6.Text + "')");           
+            baglanti.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 order by musteri_id", musteriler.dataGridView1);
             MessageBox.Show("Müşteri Kaydı Yapıldı!", "Başarılı", MessageBoxButtons.OK);
-            
-            musteriler.Show();
+            //musteriler.Show();
             this.Hide();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
+            Musteriler musteriler = (Musteriler)Application.OpenForms["Musteriler"];
             baglanti.sqlCalistir("update musteriler set ad_soyad='" + textBox1.Text + "',email='" + textBox2.Text + "',telefon='"+textBox3.Text+"',adres='"+
                 textBox4.Text+"',notlar='"+textBox5.Text+"',devreden_borc="+textBox6.Text+" where musteri_id="+musteri_id);
+            baglanti.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 order by musteri_id", musteriler.dataGridView1);
             MessageBox.Show("Güncelleme yapıldı!", "Başarılı", MessageBoxButtons.OK);
+            this.Hide();
         }
     }
 }

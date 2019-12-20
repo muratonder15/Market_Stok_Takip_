@@ -69,5 +69,17 @@ namespace Market_Stok_Takip_MRT
                 "and h.musteri_id=" + musteri_id +
                 " and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') order by h.islem_tarihi desc", dataGridView2);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ExceleAktar excel = new ExceleAktar();
+            excel.excelExport(dataGridView1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ExceleAktar excel = new ExceleAktar();
+            excel.excelExport(dataGridView2);
+        }
     }
 }

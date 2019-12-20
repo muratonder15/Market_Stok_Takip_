@@ -50,6 +50,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnVazgec = new System.Windows.Forms.Button();
+            this.btnGuncelle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -199,7 +200,7 @@
             // 
             // txtBorc
             // 
-            this.txtBorc.Location = new System.Drawing.Point(249, 371);
+            this.txtBorc.Location = new System.Drawing.Point(249, 360);
             this.txtBorc.Name = "txtBorc";
             this.txtBorc.Size = new System.Drawing.Size(100, 20);
             this.txtBorc.TabIndex = 19;
@@ -207,7 +208,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(110, 374);
+            this.label10.Location = new System.Drawing.Point(110, 363);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(133, 13);
             this.label10.TabIndex = 18;
@@ -215,7 +216,7 @@
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(116, 421);
+            this.btnKaydet.Location = new System.Drawing.Point(132, 401);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 20;
@@ -225,18 +226,30 @@
             // 
             // btnVazgec
             // 
-            this.btnVazgec.Location = new System.Drawing.Point(222, 421);
+            this.btnVazgec.Location = new System.Drawing.Point(238, 401);
             this.btnVazgec.Name = "btnVazgec";
             this.btnVazgec.Size = new System.Drawing.Size(75, 23);
             this.btnVazgec.TabIndex = 21;
             this.btnVazgec.Text = "Vazgeç";
             this.btnVazgec.UseVisualStyleBackColor = true;
             // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(132, 401);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(75, 23);
+            this.btnGuncelle.TabIndex = 22;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Visible = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
             // ToptanciKayit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 456);
+            this.ClientSize = new System.Drawing.Size(410, 501);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnVazgec);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.txtBorc);
@@ -261,6 +274,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ToptanciKayit";
             this.Text = "ToptanciKayit";
+            this.Load += new System.EventHandler(this.ToptanciKayit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,7 +302,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtBorc;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnVazgec;
+        public System.Windows.Forms.Button btnKaydet;
+        public System.Windows.Forms.Button btnGuncelle;
     }
 }

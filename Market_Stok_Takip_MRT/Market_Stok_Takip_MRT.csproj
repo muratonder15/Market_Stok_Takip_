@@ -59,11 +59,29 @@
     <Compile Include="Baglanti.cs" />
     <Compile Include="ComboboxItem.cs" />
     <Compile Include="ExceleAktar.cs" />
+    <Compile Include="GelirGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GelirGirisi.Designer.cs">
+      <DependentUpon>GelirGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiderGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiderGirisi.Designer.cs">
+      <DependentUpon>GiderGirisi.cs</DependentUpon>
+    </Compile>
     <Compile Include="HizliTusSecimi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HizliTusSecimi.Designer.cs">
       <DependentUpon>HizliTusSecimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HizliTusSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HizliTusSil.Designer.cs">
+      <DependentUpon>HizliTusSil.cs</DependentUpon>
     </Compile>
     <Compile Include="Iadeler.cs">
       <SubType>Form</SubType>
@@ -126,6 +144,12 @@
     <Compile Include="Satisİslemi.Designer.cs">
       <DependentUpon>Satisİslemi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sayimİslemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sayimİslemi.Designer.cs">
+      <DependentUpon>Sayimİslemi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stoklar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,8 +209,17 @@
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GelirGirisi.resx">
+      <DependentUpon>GelirGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiderGirisi.resx">
+      <DependentUpon>GiderGirisi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HizliTusSecimi.resx">
       <DependentUpon>HizliTusSecimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HizliTusSil.resx">
+      <DependentUpon>HizliTusSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iadeler.resx">
       <DependentUpon>Iadeler.cs</DependentUpon>
@@ -217,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Satisİslemi.resx">
       <DependentUpon>Satisİslemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sayimİslemi.resx">
+      <DependentUpon>Sayimİslemi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stoklar.resx">
       <DependentUpon>Stoklar.cs</DependentUpon>

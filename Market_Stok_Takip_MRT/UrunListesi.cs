@@ -39,12 +39,12 @@ namespace Market_Stok_Takip_MRT
 
         private void UrunListesi_Load(object sender, EventArgs e)
         {
-            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and mevcut_stok>0", dataGridView1);
+            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and mevcut_stok>0 and urun_varmi=true", dataGridView1);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and urun_adi like'%" + textBox1.Text + "%'" +
+            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and urun_var_mi=true and urun_adi like'%" + textBox1.Text + "%'" +
                 "or barkod like'%"+textBox1.Text+"%'", dataGridView1);
         }
     }

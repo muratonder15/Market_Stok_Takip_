@@ -91,10 +91,10 @@ namespace Market_Stok_Takip_MRT
             {
                              
                 baglanti.sqlCalistir
-                    ("insert into urun_stok (barkod,urun_adi,urun_grup_id,alis_fiyati,satis_fiyati,kdv_orani,mevcut_stok,olcu_birimi_id,toptanci_id,odeme_turu_id) values("
+                    ("insert into urun_stok (barkod,urun_adi,urun_grup_id,alis_fiyati,satis_fiyati,kdv_orani,mevcut_stok,olcu_birimi_id,toptanci_id,odeme_turu_id,urun_var_mi) values("
                     + Convert.ToInt32(txtBarkodNo.Text) + ",'" + txtUrunAdi.Text + "'," + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + "," + Convert.ToInt32(txtAlisFiyati.Text) + ","
                     + Convert.ToInt32(txtSatisFiyati.Text) + "," + Convert.ToInt32(txtKdvOrani.Text) + "," + Convert.ToInt32(txtStokMiktari.Text) + ","
-                    + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + "," + Convert.ToInt32(cmbToptanci.SelectedValue) + "," + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + ")");
+                    + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + "," + Convert.ToInt32(cmbToptanci.SelectedValue) + "," + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + ",true)");
                 
                 urun_id = Convert.ToInt32(baglanti.verileriOku("select id from urun_stok where barkod="+txtBarkodNo.Text).Rows[0][0]);
                 

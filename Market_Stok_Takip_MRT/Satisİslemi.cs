@@ -19,6 +19,7 @@ namespace Market_Stok_Takip_MRT
         Baglanti baglanti = new Baglanti();
         public int urun_id;
         public int musteri_id=1;
+        AnaMenu ana_menu = (AnaMenu)Application.OpenForms["AnaMenu"];
         DataTable tablo = new DataTable();
         private void button1_Click(object sender, EventArgs e)
         {
@@ -44,7 +45,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
 
         }
@@ -171,7 +172,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -199,7 +200,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -227,7 +228,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -255,7 +256,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -283,7 +284,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -311,7 +312,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -339,7 +340,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -367,7 +368,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -395,7 +396,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -423,7 +424,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -451,7 +452,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -479,7 +480,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -507,7 +508,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -535,7 +536,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -563,7 +564,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                 }
-                textBox1.Text = toplam.ToString();
+                textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
             }
         }
 
@@ -590,7 +591,8 @@ namespace Market_Stok_Takip_MRT
                     {
                         toplam += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
                     }
-                    textBox1.Text = toplam.ToString();
+                    textBox1.Text = string.Format("{0:0.##}", double.Parse(toplam.ToString()));
+                    
                     textBox5.Clear();
                 }
             }
@@ -603,7 +605,7 @@ namespace Market_Stok_Takip_MRT
 
                 for (int i = 0; i < dataGridView1.Rows.Count - 1; ++i)
             {
-                
+                    
                     string id = baglanti.verileriOku("select id from urun_stok where id=" + dataGridView1.Rows[i].Cells[0].Value).Rows[0][0].ToString();
                     string barkod = baglanti.verileriOku("select barkod from urun_stok where id=" + dataGridView1.Rows[i].Cells[0].Value).Rows[0][0].ToString();
                     string alis_fiyati = baglanti.verileriOku("select alis_fiyati from urun_stok where id=" + dataGridView1.Rows[i].Cells[0].Value).Rows[0][0].ToString();
@@ -615,10 +617,12 @@ namespace Market_Stok_Takip_MRT
                         "islem_tarihi,barkod,urun_id,alis_fiyati,satis_fiyati,miktar,kar,kdv_orani," +
                         "odeme_turu_kodu,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,musteri_id) values(4,1,'" + DateTime.Now + "'," + barkod +
                         "," + id + "," + alis_fiyati + "," + satis_fiyati + "," + miktar + "," + (Convert.ToInt32(satis_fiyati) - Convert.ToInt32(alis_fiyati)).ToString() +
-                        "," + kdv_orani + ",2," + toplam_tutar + ",'',1,"+musteri_id+")");
+                        "," + kdv_orani + ",2," + toplam_tutar + ",'',"+ana_menu.kullanici_kodu+","+musteri_id+")");
                     baglanti.sqlCalistir("update urun_stok set mevcut_stok=mevcut_stok-"+miktar+" where id="+id);
                 }
-                   MessageBox.Show("Satiş işlemi gerçekleşti", "Başarılı", MessageBoxButtons.OK);
+                textBox2.Text = textBox1.Text;
+                textBox3.Text = string.Format("{0:c}", double.Parse("0"));
+                MessageBox.Show("Satiş işlemi gerçekleşti", "Başarılı", MessageBoxButtons.OK);
                    this.Refresh();
             }
             else
@@ -648,9 +652,11 @@ namespace Market_Stok_Takip_MRT
                         "islem_tarihi,barkod,urun_id,alis_fiyati,satis_fiyati,miktar,kar,kdv_orani," +
                         "odeme_turu_kodu,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,musteri_id) values(4,1,'" + DateTime.Now + "'," + barkod +
                         "," + id + "," + alis_fiyati + "," + satis_fiyati + "," + miktar + "," + (Convert.ToInt32(satis_fiyati) - Convert.ToInt32(alis_fiyati)).ToString() +
-                        "," + kdv_orani + ",5," + toplam_tutar + ",'',1,"+musteri_id+")");
+                        "," + kdv_orani + ",5," + toplam_tutar + ",'',"+ana_menu.kullanici_kodu+"," +musteri_id+")");
                     baglanti.sqlCalistir("update urun_stok set mevcut_stok=mevcut_stok-" + miktar + " where id=" + id);
                 }
+                textBox2.Text = textBox1.Text;
+                textBox3.Text = string.Format("{0:c}", double.Parse("0"));
                 MessageBox.Show("Satiş işlemi gerçekleşti", "Başarılı", MessageBoxButtons.OK);
                 this.Refresh();
             }
@@ -679,10 +685,12 @@ namespace Market_Stok_Takip_MRT
                         "islem_tarihi,barkod,urun_id,alis_fiyati,satis_fiyati,miktar,kar,kdv_orani," +
                         "odeme_turu_kodu,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,musteri_id) values(4,1,'" + DateTime.Now + "'," + barkod +
                         "," + id + "," + alis_fiyati + "," + satis_fiyati + "," + miktar + "," + (Convert.ToInt32(satis_fiyati) - Convert.ToInt32(alis_fiyati)).ToString() +
-                        "," + kdv_orani + ",3," + toplam_tutar + ",'',1,"+musteri_id+")");
+                        "," + kdv_orani + ",3," + toplam_tutar + ",'',"+ana_menu.kullanici_kodu+","+musteri_id+")");
                     baglanti.sqlCalistir("update urun_stok set mevcut_stok=mevcut_stok-" + miktar + " where id=" + id);
 
                 }
+                textBox2.Text = textBox1.Text;
+                textBox3.Text = string.Format("{0:c}", double.Parse("0"));
                 MessageBox.Show("Satiş işlemi gerçekleşti", "Başarılı", MessageBoxButtons.OK);
                 this.Refresh();
             }
@@ -723,10 +731,11 @@ namespace Market_Stok_Takip_MRT
                             "islem_tarihi,barkod,urun_id,alis_fiyati,satis_fiyati,miktar,kar,kdv_orani," +
                             "odeme_turu_kodu,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,musteri_id) values(4,1,'" + DateTime.Now + "'," + barkod +
                             "," + id + "," + alis_fiyati + "," + satis_fiyati + "," + miktar + "," + (Convert.ToInt32(satis_fiyati) - Convert.ToInt32(alis_fiyati)).ToString() +
-                            "," + kdv_orani + ",4," + toplam_tutar + ",'',1," + musteri_id + ")");
+                            "," + kdv_orani + ",4," + toplam_tutar + ",'',"+ana_menu.kullanici_kodu+"," + musteri_id + ")");
                         baglanti.sqlCalistir("update urun_stok set mevcut_stok=mevcut_stok-" + miktar + " where id=" + id);
-                    }                   
-                    baglanti.sqlCalistir("update musteriler set devreden_borc=devreden_borc+" + Convert.ToInt32(textBox1.Text) + " where musteri_id=" + musteri_id);
+                    }
+                    label6.Text = String.Format("{0:0.##}", textBox1.Text.ToString()); 
+                    baglanti.sqlCalistir("update musteriler set devreden_borc=devreden_borc+" + label6.Text + " where musteri_id=" + musteri_id);
                     string cari_hesap_adi = baglanti.verileriOku("select ad_soyad from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
                     baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,odeme_turu_kodu,urun_id,islem_tarihi,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,musteri_id) values(2,3,1,2,'" + DateTime.Now + "'," + textBox1.Text + ",'" + cari_hesap_adi + "',1," + musteri_id + ")");                    
                     MessageBox.Show("Satiş işlemi gerçekleşti", "Başarılı", MessageBoxButtons.OK);
@@ -742,6 +751,13 @@ namespace Market_Stok_Takip_MRT
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            HizliTusSil hizli_tus_sil = new HizliTusSil();
+            hizli_tus_sil.Show();
+            this.Hide();
         }
     }
 }
