@@ -437,8 +437,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtToptanciAdi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox textBox1;
@@ -447,5 +445,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button5;
     }
 }

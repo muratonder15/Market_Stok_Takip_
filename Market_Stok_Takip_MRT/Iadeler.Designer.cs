@@ -48,6 +48,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox1.Location = new System.Drawing.Point(28, 51);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -57,6 +58,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox2.Location = new System.Drawing.Point(101, 51);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -95,6 +97,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox3.Location = new System.Drawing.Point(148, 377);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -110,14 +113,14 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Location = new System.Drawing.Point(341, 358);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(255, 147);
+            this.groupBox1.Size = new System.Drawing.Size(255, 99);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İade Onaylama";
             // 
             // btnToptanciNakit
             // 
-            this.btnToptanciNakit.Location = new System.Drawing.Point(12, 83);
+            this.btnToptanciNakit.Location = new System.Drawing.Point(12, 23);
             this.btnToptanciNakit.Name = "btnToptanciNakit";
             this.btnToptanciNakit.Size = new System.Drawing.Size(75, 50);
             this.btnToptanciNakit.TabIndex = 3;
@@ -128,7 +131,7 @@
             // 
             // btnToptanciyaEkle
             // 
-            this.btnToptanciyaEkle.Location = new System.Drawing.Point(148, 83);
+            this.btnToptanciyaEkle.Location = new System.Drawing.Point(148, 23);
             this.btnToptanciyaEkle.Name = "btnToptanciyaEkle";
             this.btnToptanciyaEkle.Size = new System.Drawing.Size(75, 50);
             this.btnToptanciyaEkle.TabIndex = 5;
@@ -217,8 +220,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -226,5 +227,7 @@
         public System.Windows.Forms.TextBox textBox3;
         public System.Windows.Forms.Button btnToptanciNakit;
         public System.Windows.Forms.Button btnToptanciyaEkle;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button6;
     }
 }

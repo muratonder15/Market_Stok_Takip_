@@ -114,6 +114,8 @@ namespace Market_Stok_Takip_MRT
             iadeler.toptanci_id = toptanci_id;
             iadeler.btnToptanciNakit.Visible = true;
             iadeler.btnToptanciyaEkle.Visible = true;
+            iadeler.button4.Visible = false;
+            iadeler.button6.Visible = false;
             iadeler.Show();
 
         }
