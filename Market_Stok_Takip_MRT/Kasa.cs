@@ -66,7 +66,7 @@ namespace Market_Stok_Takip_MRT
             {
                 textBox1.Text = "0";
             }
-            textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
+            textBox3.Text = (Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text)).ToString();
 
         }
 
