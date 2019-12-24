@@ -44,8 +44,22 @@ namespace Market_Stok_Takip_MRT
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and urun_var_mi=true and urun_adi like'%" + textBox1.Text + "%'" +
-                "or barkod like'%"+textBox1.Text+"%'", dataGridView1);
+            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and urun_varmi=true and urun_adi like'%" + textBox1.Text + "%'" 
+               , dataGridView1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Sayimİslemi sayim_islemi = (Sayimİslemi)Application.OpenForms["Sayimİslemi"];
+            sayim_islemi.urun_id= Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+            int id= Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+            string barkod = baglanti.verileriOku("select barkod from urun_stok where id=" + id).Rows[0][0].ToString();
+            string urun_adi = baglanti.verileriOku("select urun_adi from urun_stok where id=" + id).Rows[0][0].ToString();
+            sayim_islemi.textBox1.Text = barkod;
+            sayim_islemi.textBox2.Text = urun_adi;
+            sayim_islemi.button2.Enabled = true;
+            this.Hide();
+
         }
     }
 }

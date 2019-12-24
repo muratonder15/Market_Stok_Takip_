@@ -88,7 +88,7 @@
             this.groupBox1.Size = new System.Drawing.Size(565, 305);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Ürün Detayları";
             // 
             // label7
             // 
@@ -170,7 +170,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(21, 185);
+            this.label5.Location = new System.Drawing.Point(21, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 24);
             this.label5.TabIndex = 4;
@@ -180,7 +180,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(21, 151);
+            this.label4.Location = new System.Drawing.Point(19, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 24);
             this.label4.TabIndex = 3;
@@ -250,7 +250,7 @@
             this.groupBox2.Size = new System.Drawing.Size(800, 110);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Filtreleme";
             // 
             // comboBox2
             // 
@@ -318,6 +318,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(30, 453);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 150);
             this.dataGridView1.TabIndex = 17;
@@ -334,7 +335,7 @@
             this.groupBox3.Size = new System.Drawing.Size(200, 305);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "İşlemler";
             // 
             // button6
             // 
@@ -400,6 +401,7 @@
             this.button7.TabIndex = 20;
             this.button7.Text = "Kayıtları Excel\'e Aktar";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Stoklar
             // 

@@ -91,8 +91,8 @@ namespace Market_Stok_Takip_MRT
             {
                              
                 baglanti.sqlCalistir
-                    ("insert into urun_stok (barkod,urun_adi,urun_grup_id,alis_fiyati,satis_fiyati,kdv_orani,mevcut_stok,olcu_birimi_id,toptanci_id,odeme_turu_id,urun_var_mi) values("
-                    + Convert.ToInt32(txtBarkodNo.Text) + ",'" + txtUrunAdi.Text + "'," + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + "," + Convert.ToInt32(txtAlisFiyati.Text) + ","
+                    ("insert into urun_stok (barkod,urun_adi,urun_grup_id,alis_fiyati,satis_fiyati,kdv_orani,mevcut_stok,olcu_birimi_id,toptanci_id,odeme_turu_id,urun_varmi) values("
+                    + Convert.ToInt32(txtBarkodNo.Text) + ",'" + txtUrunAdi.Text + "'," + Convert.ToInt32(cmbUrunGrubu.SelectedValue) + ",'" + txtAlisFiyati.Text + "',"
                     + Convert.ToInt32(txtSatisFiyati.Text) + "," + Convert.ToInt32(txtKdvOrani.Text) + "," + Convert.ToInt32(txtStokMiktari.Text) + ","
                     + Convert.ToInt32(cmbOlcuBirimi.SelectedValue) + "," + Convert.ToInt32(cmbToptanci.SelectedValue) + "," + Convert.ToInt32(cmbOdemeTurleri.SelectedValue) + ",true)");
                 
@@ -100,7 +100,7 @@ namespace Market_Stok_Takip_MRT
                 
                 baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,islem_tarihi,barkod,urun_id,alis_fiyati," +
                     "satis_fiyati,miktar,kar,kdv_orani,odeme_turu_kodu,toplam_tutar,islemi_yapan_kullanici_kodu,musteri_id,toptanci_id)" +
-                    "values(6,2,'"+DateTime.Now+"',"+ Convert.ToInt32(txtBarkodNo.Text)+","+urun_id+","+ Convert.ToInt32(txtAlisFiyati.Text)+","+ Convert.ToInt32(txtSatisFiyati.Text)+","
+                    "values(6,2,'"+DateTime.Now+"',"+ Convert.ToInt32(txtBarkodNo.Text)+","+urun_id+ ",'" + txtAlisFiyati.Text+"',"+ Convert.ToInt32(txtSatisFiyati.Text)+","
                     +Convert.ToInt32(txtStokMiktari.Text)+","+ (Convert.ToInt32(txtSatisFiyati.Text)- Convert.ToInt32(txtAlisFiyati.Text))+","+ Convert.ToInt32(txtKdvOrani.Text)+","
                    + Convert.ToInt32(cmbOdemeTurleri.SelectedValue)+","+ (Convert.ToInt32(txtAlisFiyati.Text)* Convert.ToInt32(txtStokMiktari.Text))+","
                     + "1,1,"+ Convert.ToInt32(cmbToptanci.SelectedValue)+")"
@@ -172,12 +172,12 @@ namespace Market_Stok_Takip_MRT
 
         private void txtBarkodNo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ',';
         }
 
         private void txtAlisFiyati_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ',';
         }
 
         private void txtSatisFiyati_KeyPress(object sender, KeyPressEventArgs e)
