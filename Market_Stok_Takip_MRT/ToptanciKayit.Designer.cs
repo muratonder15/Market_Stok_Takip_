@@ -204,6 +204,7 @@
             this.txtBorc.Name = "txtBorc";
             this.txtBorc.Size = new System.Drawing.Size(100, 20);
             this.txtBorc.TabIndex = 19;
+            this.txtBorc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBorc_KeyPress);
             // 
             // label10
             // 

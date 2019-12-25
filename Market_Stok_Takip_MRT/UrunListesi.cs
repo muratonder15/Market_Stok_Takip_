@@ -27,11 +27,11 @@ namespace Market_Stok_Takip_MRT
             string barkod = baglanti.verileriOku("select barkod from urun_stok where id=" + id).Rows[0][0].ToString();
             string urun_adi = baglanti.verileriOku("select urun_adi from urun_stok where id=" + id).Rows[0][0].ToString();
             int stok_miktari = Convert.ToInt32(baglanti.verileriOku("select mevcut_stok from urun_stok where id=" + id).Rows[0][0].ToString());
-            int satis_fiyati = Convert.ToInt32(baglanti.verileriOku("select satis_fiyati from urun_stok where id=" + id).Rows[0][0].ToString());
+            double satis_fiyati = Convert.ToDouble(baglanti.verileriOku("select satis_fiyati from urun_stok where id=" + id).Rows[0][0].ToString());
             iadeler.tablo.Rows.Add(id, barkod, urun_adi, satis_fiyati, 1, 1 * satis_fiyati);
             iadeler.dataGridView1.DataSource = iadeler.tablo;
-            int toplam = 0;                    
-            toplam = Convert.ToInt32(iadeler.textBox3.Text);
+            double toplam = 0;                    
+            toplam = Convert.ToDouble(iadeler.textBox3.Text);
             toplam += 1 * satis_fiyati;
             iadeler.textBox3.Text = toplam.ToString();
             this.Hide();
@@ -39,7 +39,7 @@ namespace Market_Stok_Takip_MRT
 
         private void UrunListesi_Load(object sender, EventArgs e)
         {
-            baglanti.verileriTablodaGoster("select id,barkod,urun_adi from urun_stok where id<>2 and mevcut_stok>0 and urun_varmi=true", dataGridView1);
+            baglanti.verileriTablodaGoster("select id,barkod,urun_adi,satis_fiyati from urun_stok where id<>2 and mevcut_stok>0 and urun_varmi=true", dataGridView1);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -60,6 +60,26 @@ namespace Market_Stok_Takip_MRT
             sayim_islemi.button2.Enabled = true;
             this.Hide();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Satisİslemi satis_islemi = (Satisİslemi)Application.OpenForms["Satisİslemi"];
+            satis_islemi.urun_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+            string id = dataGridView1.CurrentRow.Cells["id"].Value.ToString();
+            string barkod = baglanti.verileriOku("select barkod from urun_stok where id=" + id).Rows[0][0].ToString();
+            string urun_adi = baglanti.verileriOku("select urun_adi from urun_stok where id=" + id).Rows[0][0].ToString();
+            int stok_miktari = Convert.ToInt32(baglanti.verileriOku("select mevcut_stok from urun_stok where id=" + id).Rows[0][0].ToString());
+            double satis_fiyati = Convert.ToDouble(baglanti.verileriOku("select satis_fiyati from urun_stok where id=" + id).Rows[0][0].ToString());
+            satis_islemi.tablo.Rows.Add(id, barkod, urun_adi, stok_miktari, satis_fiyati, 1, 1 * satis_fiyati);
+            satis_islemi.dataGridView1.DataSource = satis_islemi.tablo;
+            double toplam = 0;
+            for (int i = 0; i < satis_islemi.dataGridView1.Rows.Count; ++i)
+            {
+                toplam += Convert.ToDouble(satis_islemi.dataGridView1.Rows[i].Cells[6].Value);
+            }
+            satis_islemi.textBox1.Text = toplam.ToString();
+            this.Close();
         }
     }
 }

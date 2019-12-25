@@ -31,7 +31,7 @@ namespace Market_Stok_Takip_MRT
                 "and h.toptanci_id=" + toptanci_id +
                 " and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59') order by h.islem_tarihi desc", dataGridView1);
 
-            baglanti.verileriTablodaGoster("select h.islem_tarihi,us.urun_adi,h.miktar,h.toplam_tutar,ot.odeme_turu from (((((hareketler h " +
+            baglanti.verileriTablodaGoster("select h.islem_tarihi,us.urun_adi,h.miktar,h.alis_fiyati,h.toplam_tutar,ot.odeme_turu from (((((hareketler h " +
                 "inner join hareket_turleri ht on h.hareket_turu_kodu=ht.hareket_kodu) " +
                 "inner join islem_turleri it on h.islem_turu_kodu=it.islem_kodu) " +
                 "inner join urun_stok us on h.urun_id=us.id) " +

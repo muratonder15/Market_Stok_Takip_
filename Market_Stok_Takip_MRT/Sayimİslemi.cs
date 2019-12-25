@@ -32,11 +32,12 @@ namespace Market_Stok_Takip_MRT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (baglanti.verileriOku("select count(*) from urun_stok where (urun_adi like '%" + textBox2.Text + "%' or barkod="+textBox1.Text+") and urun_varmi=true and mevcut_stok>0 ").Rows[0][0].ToString()!="0")
+            if (baglanti.verileriOku("select count(*) from urun_stok where barkod="+textBox1.Text+" and urun_varmi=true and mevcut_stok>0 ").Rows[0][0].ToString()!="0")
             {
-                string id = baglanti.verileriOku("select id from urun_stok where urun_adi like '%" + textBox2.Text + "%' and urun_varmi=true and mevcut_stok>0 ").Rows[0][0].ToString();
+                string id = baglanti.verileriOku("select id from urun_stok where barkod=" + textBox1.Text + " and urun_varmi=true and mevcut_stok>0 ").Rows[0][0].ToString();
                 string barkod = baglanti.verileriOku("select barkod from urun_stok where id=" + id).Rows[0][0].ToString();
                 string urun_adi = baglanti.verileriOku("select urun_adi from urun_stok where id=" + id).Rows[0][0].ToString();
+                textBox2.Text = urun_adi;
                 int stok_miktari = Convert.ToInt32(baglanti.verileriOku("select mevcut_stok from urun_stok where id=" + id).Rows[0][0].ToString());
                 sayimda_sayilan = Convert.ToInt32(textBox3.Text);
 
@@ -115,6 +116,21 @@ namespace Market_Stok_Takip_MRT
             button5.Enabled = false;
             button2.Enabled = false;
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void button3_Click(object sender, EventArgs e)

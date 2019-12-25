@@ -309,6 +309,7 @@
             this.button18.TabIndex = 23;
             this.button18.Text = "Ürün Arama";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // label1
             // 
@@ -442,11 +443,13 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 36;
             this.label6.Text = "label6";
+            this.label6.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.Blue;
             this.label7.Location = new System.Drawing.Point(666, 485);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 24);
@@ -506,10 +509,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -545,5 +545,7 @@
         public System.Windows.Forms.Button button24;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

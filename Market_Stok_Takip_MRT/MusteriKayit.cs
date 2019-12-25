@@ -62,5 +62,10 @@ namespace Market_Stok_Takip_MRT
                 this.Hide();
             }
         }
+
+        private void textBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ',';
+        }
     }
 }

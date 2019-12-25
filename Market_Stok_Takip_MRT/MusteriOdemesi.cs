@@ -32,7 +32,10 @@ namespace Market_Stok_Takip_MRT
             string cari_hesap_adi = baglanti.verileriOku("select * from musteriler where musteri_id=" + musteri_id).Rows[0][1].ToString();
             baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,odeme_turu_kodu,urun_id,islem_tarihi,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,musteri_id) values(3,1," + comboBox1.SelectedValue.ToString() +",2,'" + DateTime.Now + "','" + textBox4.Text + "','" + cari_hesap_adi + "',"+ana_menu.kullanici_kodu+","+musteri_id+")");
             VeresiyeDefteri veresiye_defteri = (VeresiyeDefteri)Application.OpenForms["VeresiyeDefteri"];
-            veresiye_defteri.textBox2.Text = baglanti.verileriOku("select devreden_borc from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            if (veresiye_defteri != null)
+            {
+                veresiye_defteri.textBox2.Text = baglanti.verileriOku("select devreden_borc from musteriler where musteri_id=" + musteri_id).Rows[0][0].ToString();
+            }
             MessageBox.Show("Borç Ödemesi Gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
             this.Hide();
         }
