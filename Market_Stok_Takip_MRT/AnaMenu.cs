@@ -107,5 +107,16 @@ namespace Market_Stok_Takip_MRT
         {
             
         }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            DialogResult cikis = new DialogResult();
+            cikis = MessageBox.Show("Programdan çıkmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                //Environment.Exit(0);
+                Application.Exit();
+            }
+        }
     }
 }

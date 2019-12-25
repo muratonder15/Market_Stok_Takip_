@@ -116,7 +116,7 @@ namespace Market_Stok_Takip_MRT
                 {
                     textBox2.Text = "0";
                 }
-                textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
+                textBox3.Text = (Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text)).ToString();
             }
         }
 
@@ -154,7 +154,7 @@ namespace Market_Stok_Takip_MRT
                     "and h.islem_turu_kodu in (2) " +
                     "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59')").Rows[0][0].ToString();
 
-                textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
+                textBox3.Text = (Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text)).ToString();
             }
         }
 
@@ -192,7 +192,7 @@ namespace Market_Stok_Takip_MRT
                     "and h.islem_turu_kodu in (2) " +
                     "and h.islem_tarihi<=CDATE('" + dateTimePicker2.Value.ToShortDateString() + " 23:59:59')").Rows[0][0].ToString();
 
-                textBox3.Text = (Convert.ToInt32(textBox1.Text) - Convert.ToInt32(textBox2.Text)).ToString();
+                textBox3.Text = (Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text)).ToString();
             }
         }
 

@@ -254,6 +254,7 @@
             this.btnVazgec.Text = "Vazgeç";
             this.btnVazgec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVazgec.UseVisualStyleBackColor = true;
+            this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
             // 
             // txtStokMiktari
             // 
@@ -380,6 +381,7 @@
             this.button1.Text = "Yeni Toptancı Ekle";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbOlcuBirimi
             // 

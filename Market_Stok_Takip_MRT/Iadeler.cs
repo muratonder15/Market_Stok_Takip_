@@ -200,5 +200,15 @@ namespace Market_Stok_Takip_MRT
                 MessageBox.Show("sepete ürün giriniz!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult cikis = new DialogResult();
+            cikis = MessageBox.Show("İşlemi bitirmeden çıkmak istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+        }
     }
 }

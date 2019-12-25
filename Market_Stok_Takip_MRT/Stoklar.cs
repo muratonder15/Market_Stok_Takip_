@@ -42,16 +42,23 @@ namespace Market_Stok_Takip_MRT
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.CurrentRow.Cells["id"].Value.ToString() != "")
+            try
             {
-                urun_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-                textBox1.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["barkod"].Value.ToString());
-                textBox2.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["urun_adi"].Value.ToString());
-                textBox3.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["urun_grup_adi"].Value.ToString());
-                textBox4.Text =  Convert.ToString(dataGridView1.CurrentRow.Cells["alis_fiyati"].Value.ToString());
-                textBox5.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["satis_fiyati"].Value.ToString());
-                textBox6.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["mevcut_stok"].Value.ToString());
-                textBox7.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["kdv_orani"].Value.ToString());
+                if (dataGridView1.CurrentRow.Cells["id"].Value.ToString() != "" && string.IsNullOrEmpty(dataGridView1.CurrentRow.Cells["id"].Value.ToString()) != true)
+                {
+                    urun_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
+                    textBox1.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["barkod"].Value.ToString());
+                    textBox2.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["urun_adi"].Value.ToString());
+                    textBox3.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["urun_grup_adi"].Value.ToString());
+                    textBox4.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["alis_fiyati"].Value.ToString());
+                    textBox5.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["satis_fiyati"].Value.ToString());
+                    textBox6.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["mevcut_stok"].Value.ToString());
+                    textBox7.Text = Convert.ToString(dataGridView1.CurrentRow.Cells["kdv_orani"].Value.ToString());
+                }
+            }
+            catch
+            {
+
             }
         }
 
@@ -94,9 +101,11 @@ namespace Market_Stok_Takip_MRT
 
         private void comboBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            baglan.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,format(us.satis_fiyati,'Currency') as satis_fiyati,format(us.alis_fiyati,'Currency') as alis_fiyati,us.kdv_orani,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2 and urun_varmi=true and us.urun_adi like'%" + textBox8.Text + "%' and ug.urun_grup_id=" + comboBox2.SelectedValue.ToString(), dataGridView1);
-            textBox10.Text = baglan.verileriOku("select count(*) from urun_stok where id<>2 and urun_varmi=true and urun_adi like '%" + textBox8.Text + "%' and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
-            textBox9.Text = baglan.verileriOku("select format(sum(alis_fiyati*mevcut_stok),'Currency') as toplam from urun_stok where id<>2 and urun_varmi=true and urun_adi like '%" + textBox8.Text + "%' and  urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+            
+                baglan.verileriTablodaGoster("select us.id,us.barkod,us.urun_adi,ug.urun_grup_adi,format(us.satis_fiyati,'Currency') as satis_fiyati,format(us.alis_fiyati,'Currency') as alis_fiyati,us.kdv_orani,us.mevcut_stok from urun_stok us inner join urun_grubu ug on us.urun_grup_id=ug.urun_grup_id where us.id<>2 and urun_varmi=true and us.urun_adi like'%" + textBox8.Text + "%' and ug.urun_grup_id=" + comboBox2.SelectedValue.ToString(), dataGridView1);
+                textBox10.Text = baglan.verileriOku("select count(*) from urun_stok where id<>2 and urun_varmi=true and urun_adi like '%" + textBox8.Text + "%' and urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+                textBox9.Text = baglan.verileriOku("select format(sum(alis_fiyati*mevcut_stok),'Currency') as toplam from urun_stok where id<>2 and urun_varmi=true and urun_adi like '%" + textBox8.Text + "%' and  urun_grup_id=" + comboBox2.SelectedValue.ToString()).Rows[0][0].ToString();
+     
         }
 
         private void comboBox1_MouseClick(object sender, MouseEventArgs e)

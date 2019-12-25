@@ -108,3 +108,4 @@ C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.GiderGirisi.resources
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.HizliTusSil.resources
 C:\Users\mrton\OneDrive\Belgeler\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.Sayimİslemi.resources
+C:\Users\Murat\Documents\GitHub\Market_Stok_Takip_\Market_Stok_Takip_MRT\obj\Debug\Market_Stok_Takip_MRT.MailSifreGonder.resources

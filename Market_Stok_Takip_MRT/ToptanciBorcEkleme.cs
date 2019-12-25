@@ -32,12 +32,22 @@ namespace Market_Stok_Takip_MRT
         private void button1_Click(object sender, EventArgs e)
         {
             Toptancilar toptancilar = (Toptancilar)Application.OpenForms["Toptancilar"];
-            baglanti.sqlCalistir("update toptancilar set toptanci_alacak=" + (Convert.ToInt32(textBox2.Text) + Convert.ToInt32(textBox4.Text)) + " where toptanci_id=" + toptanci_id);
+            baglanti.sqlCalistir("update toptancilar set toptanci_alacak='" + (Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox4.Text)) + "' where toptanci_id=" + toptanci_id);
             baglanti.verileriTablodaGoster("select * from toptancilar where toptanci_id<>1 order by toptanci_id", toptancilar.dataGridView1);
             string cari_hesap_adi = baglanti.verileriOku("select * from toptancilar where toptanci_id=" + toptanci_id).Rows[0][1].ToString();
-            baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,odeme_turu_kodu,urun_id,islem_tarihi,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,toptanci_id) values(7,2,1,2,'" + DateTime.Now + "'," + textBox4.Text + ",'" + cari_hesap_adi + "',"+ana_menu.kullanici_kodu+","+toptanci_id+")");
+            baglanti.sqlCalistir("insert into hareketler (hareket_turu_kodu,islem_turu_kodu,odeme_turu_kodu,urun_id,islem_tarihi,toplam_tutar,cari_hesap_adi,islemi_yapan_kullanici_kodu,toptanci_id) values(7,2,1,2,'" + DateTime.Now + "','" + textBox4.Text + "','" + cari_hesap_adi + "',"+ana_menu.kullanici_kodu+","+toptanci_id+")");
             MessageBox.Show("Borç eklendi!", "Başarılı", MessageBoxButtons.OK);
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult cikis = new DialogResult();
+            cikis = MessageBox.Show("İşlemi tamamlamadan çıkmak istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                this.Hide();
+            }
         }
     }
 }

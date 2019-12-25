@@ -83,7 +83,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(99, 20);
             this.dateTimePicker2.TabIndex = 17;
-            this.dateTimePicker2.Value = new System.DateTime(2019, 12, 24, 14, 54, 10, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2019, 12, 25, 0, 0, 0, 0);
             this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // dateTimePicker1
@@ -93,7 +93,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(105, 20);
             this.dateTimePicker1.TabIndex = 16;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 12, 24, 14, 54, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2019, 12, 25, 15, 18, 58, 0);
             // 
             // radioButton1
             // 
@@ -227,6 +227,8 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 133);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(941, 498);
             this.dataGridView1.TabIndex = 12;
             // 

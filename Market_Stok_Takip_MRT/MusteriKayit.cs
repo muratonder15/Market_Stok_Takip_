@@ -47,10 +47,20 @@ namespace Market_Stok_Takip_MRT
         {
             Musteriler musteriler = (Musteriler)Application.OpenForms["Musteriler"];
             baglanti.sqlCalistir("update musteriler set ad_soyad='" + textBox1.Text + "',email='" + textBox2.Text + "',telefon='"+textBox3.Text+"',adres='"+
-                textBox4.Text+"',notlar='"+textBox5.Text+"',devreden_borc="+textBox6.Text+" where musteri_id="+musteri_id);
+                textBox4.Text+"',notlar='"+textBox5.Text+"',devreden_borc='"+textBox6.Text+"' where musteri_id="+musteri_id);
             baglanti.verileriTablodaGoster("select musteri_id,ad_soyad,format(devreden_borc,'Currency') as devreden_borc from musteriler where musteri_id<>1 order by musteri_id", musteriler.dataGridView1);
             MessageBox.Show("Güncelleme yapıldı!", "Başarılı", MessageBoxButtons.OK);
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult cikis = new DialogResult();
+            cikis = MessageBox.Show("Giriş yaptığınız bilgileri kaydetmeden çıkmak istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                this.Hide();
+            }
         }
     }
 }

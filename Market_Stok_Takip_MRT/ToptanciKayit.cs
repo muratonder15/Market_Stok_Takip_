@@ -24,7 +24,7 @@ namespace Market_Stok_Takip_MRT
             Toptancilar toptancilar = (Toptancilar)Application.OpenForms["Toptancilar"];
             baglanti.sqlCalistir("insert into toptancilar (toptanci_adi,sirket_yetkilisi,email,internet_adresi,vergi_dairesi,vergi_no,adres,telefon,notlar,kayit_tarihi,toptanci_alacak) values ('"
             +txtToptanciAdi.Text+"','" + txtSirketYetkilisi.Text + "','" + txtEmail.Text + "','" + txtInternetAdresi.Text + "','" + txtVergiDairesi.Text + "','" + txtVergiNo.Text + "','"
-            + txtAdres.Text + "','" + txtTelefon.Text + "','" + txtNotlar.Text + "','"+DateTime.Now+"',"+txtBorc.Text+")");
+            + txtAdres.Text + "','" + txtTelefon.Text + "','" + txtNotlar.Text + "','"+DateTime.Now+"','"+txtBorc.Text+"')");
 
             baglanti.verileriTablodaGoster("select toptanci_id,toptanci_adi,format(toptanci_alacak,'Currency') as toptanci_alacak from toptancilar where toptanci_id<>1", toptancilar.dataGridView1);
             MessageBox.Show("Kayıt başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
@@ -52,7 +52,7 @@ namespace Market_Stok_Takip_MRT
                 "adres='" + txtAdres.Text + "'," +
                 "telefon='" + txtTelefon.Text + "'," +
                 "notlar='" + txtNotlar.Text + "'," +
-                "toptanci_alacak=" + txtBorc.Text  +
+                "toptanci_alacak='" + txtBorc.Text  +"'"+
                 " where toptanci_id=" + toptanci_id);
             baglanti.verileriTablodaGoster("select toptanci_id,toptanci_adi,format(toptanci_alacak,'Currency') as toptanci_alacak from toptancilar where toptanci_id<>1", toptancilar.dataGridView1);
             MessageBox.Show("GÜncelleme başarıyla gerçekleşti!", "Başarılı", MessageBoxButtons.OK);
@@ -75,5 +75,15 @@ namespace Market_Stok_Takip_MRT
                 txtBorc.Text = baglanti.verileriOku("select toptanci_alacak from toptancilar where toptanci_id=" + toptanci_id).Rows[0][0].ToString();
             }
             }
+
+        private void btnVazgec_Click(object sender, EventArgs e)
+        {
+            DialogResult cikis = new DialogResult();
+            cikis = MessageBox.Show("Kaydetmeden çıkmak istiyor musunuz?", "Uyarı", MessageBoxButtons.YesNo);
+            if (cikis == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+        }
     }
 }

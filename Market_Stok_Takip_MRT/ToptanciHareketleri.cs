@@ -46,6 +46,7 @@ namespace Market_Stok_Takip_MRT
         private void ToptanciHareketleri_Load(object sender, EventArgs e)
         {
             textBox1.Text = baglanti.verileriOku("select toptanci_adi from toptancilar where toptanci_id=" + toptanci_id).Rows[0][0].ToString();
+            textBox2.Text= baglanti.verileriOku("select toptanci_alacak from toptancilar where toptanci_id=" + toptanci_id).Rows[0][0].ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
